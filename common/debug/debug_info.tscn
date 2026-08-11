@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://gp0kcdmm8kp4"]
+
+[ext_resource type="Theme" uid="uid://b6n3fjjduash3" path="res://common/ui_themes/debug_lbl.tres" id="1_gxslf"]
+[ext_resource type="Script" uid="uid://bdjrknltnlvi8" path="res://common/debug/debug_info.gd" id="1_mi653"]
+
+[node name="debug_info" type="CanvasLayer" unique_id=444789307]
+layer = 100
+script = ExtResource("1_mi653")
+
+[node name="container" type="Control" parent="." unique_id=1051743811]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="debug_info" type="Control" parent="container" unique_id=1665780555]
+layout_mode = 1
+anchor_left = 0.01
+anchor_top = 0.90000004
+anchor_right = 0.2
+anchor_bottom = 0.99
+offset_top = -0.040008545
+grow_vertical = 0
+
+[node name="vertical_container" type="VBoxContainer" parent="container/debug_info" unique_id=499293303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="fps_lbl" type="Label" parent="container/debug_info/vertical_container" unique_id=836768350]
+layout_mode = 2
+theme = ExtResource("1_gxslf")
+text = "120 fps"
+
+[node name="version_lbl" type="Label" parent="container/debug_info/vertical_container" unique_id=1872660306]
+layout_mode = 2
+theme = ExtResource("1_gxslf")
+text = "v.0.0.1-dev"

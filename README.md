@@ -107,6 +107,7 @@ Window settings could not be applied in default, cause of debbuging tools and em
 - `assets` - Folder with 'raw' files, such as graphics, fonts
   - `fonts` - Folder fonts
 - `common` - Folder with scripts, resources available in whole project
+  - `debug` - Folder with debug tools available globally
   - `ui_themes` - Folder with themes for ui
 - `scenes` - Folder with modular game elements
   - `ui` - Folder with UI scenes and their logic

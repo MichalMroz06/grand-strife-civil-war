@@ -15,6 +15,10 @@ run/main_scene="uid://0gl3keb2ok8y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://cqsl1k4cqajgl"
 
+[autoload]
+
+DebugInfo="*uid://gp0kcdmm8kp4"
+
 [display]
 
 window/size/viewport_width=640
