@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://byxjom4ro8j5t"]
+
+[ext_resource type="FontFile" uid="uid://cy6v4177rwkfw" path="res://assets/fonts/IMMORTAL.ttf" id="1_dhmhd"]
+
+[resource]
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_dhmhd")

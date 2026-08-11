@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b7jukobs2cbbr"]
+
+[ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="1_sl1te"]
+
+[node name="main_menu" type="CanvasLayer" unique_id=305854321]
+
+[node name="main_menu" type="Control" parent="." unique_id=1909292624]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="screen_container" type="Control" parent="main_menu" unique_id=251355471]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="base_container" type="Control" parent="main_menu" unique_id=1394279717]
+layout_mode = 1
+anchor_left = 0.1
+anchor_right = 0.4
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="background_color" type="ColorRect" parent="main_menu/base_container" unique_id=328828533]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="vertical_container" type="VBoxContainer" parent="main_menu/base_container" unique_id=1677757265]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 2
+
+[node name="exit_btn" type="TextureButton" parent="main_menu/base_container/vertical_container" unique_id=1494080046]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="exit_btn_lbl" type="Label" parent="main_menu/base_container/vertical_container/exit_btn" unique_id=1787515268]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_sl1te")
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
