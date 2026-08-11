@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Grand Strife Civil War"
-run/main_scene="uid://b7jukobs2cbbr"
+run/main_scene="uid://0gl3keb2ok8y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://cqsl1k4cqajgl"
 

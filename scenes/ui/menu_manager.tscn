@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://b7jukobs2cbbr"]
+[gd_scene format=3 uid="uid://0gl3keb2ok8y"]
 
-[ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="1_sl1te"]
+[ext_resource type="Script" uid="uid://ct61jngulm6hn" path="res://scenes/ui/menu_manager.gd" id="1_bg225"]
+[ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="2_s8l6t"]
 
-[node name="main_menu" type="CanvasLayer" unique_id=305854321]
+[node name="menu_manager" type="CanvasLayer" unique_id=305854321]
+script = ExtResource("1_bg225")
 
 [node name="main_menu" type="Control" parent="." unique_id=1909292624]
 layout_mode = 3
@@ -59,7 +61,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_sl1te")
+theme = ExtResource("2_s8l6t")
 text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="main_menu/base_container/vertical_container/exit_btn" to="." method="_on_exit_btn_pressed"]

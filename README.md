@@ -110,6 +110,7 @@ Window settings could not be applied in default, cause of debbuging tools and em
   - `ui_themes` - Folder with themes for ui
 - `scenes` - Folder with modular game elements
   - `ui` - Folder with UI scenes and their logic
+    - `menu_pages` - Folder with menu pages, such as `main_menu` or `settings`
 
 ---
 
