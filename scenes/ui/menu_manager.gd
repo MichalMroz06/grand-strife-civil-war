@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var screen_container: Control = $menu_manager/screen_container
 
 @export var main_menu_scene: PackedScene = preload("uid://bre176g3lqfq3")
-@export var credits_scene: PackedScene
+@export var credits_scene: PackedScene = preload("uid://ci2kaobp55ueg")
 @export var settings_scene: PackedScene
 var current_screen: Control = null
 
@@ -36,7 +36,7 @@ func _on_back_pressed() -> void:
 	open_screen(main_menu_scene)
 
 func _on_credits_pressed() -> void:
-	print("credits")
+	open_screen(credits_scene)
 
 func _on_settings_pressed() -> void:
 	print("settings")

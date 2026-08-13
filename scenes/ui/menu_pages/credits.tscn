@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ci2kaobp55ueg"]
+
+[ext_resource type="Script" uid="uid://ndd58vrsydol" path="res://scenes/ui/menu_pages/credits.gd" id="1_5g55p"]
+[ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="1_j6tib"]
+
+[node name="credits" type="Control" unique_id=436544235]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5g55p")
+
+[node name="credits_section" type="Control" parent="." unique_id=1220270647]
+layout_mode = 1
+anchor_left = 0.4
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="nav_section" type="Control" parent="." unique_id=1707410826]
+layout_mode = 1
+anchor_left = 0.1
+anchor_right = 0.4
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="nav_section" unique_id=961418898]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.84
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="back_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=1710417592]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="back_btn_lbl" type="Label" parent="nav_section/vertical_container/back_btn" unique_id=1994744729]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j6tib")
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="nav_section/vertical_container/back_btn" to="." method="_on_back_btn_pressed"]
