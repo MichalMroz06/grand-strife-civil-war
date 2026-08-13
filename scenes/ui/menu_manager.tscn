@@ -6,7 +6,7 @@
 [node name="menu_manager" type="CanvasLayer" unique_id=305854321]
 script = ExtResource("1_bg225")
 
-[node name="main_menu" type="Control" parent="." unique_id=1909292624]
+[node name="menu_manager" type="Control" parent="." unique_id=1909292624]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="screen_container" type="Control" parent="main_menu" unique_id=251355471]
+[node name="screen_container" type="Control" parent="menu_manager" unique_id=251355471]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,14 +22,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="base_container" type="Control" parent="main_menu" unique_id=1394279717]
+[node name="base_container" type="Control" parent="menu_manager" unique_id=1394279717]
 layout_mode = 1
 anchor_left = 0.1
 anchor_right = 0.4
 anchor_bottom = 1.0
 grow_vertical = 2
 
-[node name="background_color" type="ColorRect" parent="main_menu/base_container" unique_id=328828533]
+[node name="background_color" type="ColorRect" parent="menu_manager/base_container" unique_id=328828533]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6)
 
-[node name="vertical_container" type="VBoxContainer" parent="main_menu/base_container" unique_id=1677757265]
+[node name="vertical_container" type="VBoxContainer" parent="menu_manager/base_container" unique_id=1677757265]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -50,11 +50,11 @@ grow_vertical = 2
 theme_override_constants/separation = 6
 alignment = 2
 
-[node name="exit_btn" type="TextureButton" parent="main_menu/base_container/vertical_container" unique_id=1494080046]
+[node name="exit_btn" type="TextureButton" parent="menu_manager/base_container/vertical_container" unique_id=1494080046]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="exit_btn_lbl" type="Label" parent="main_menu/base_container/vertical_container/exit_btn" unique_id=1787515268]
+[node name="exit_btn_lbl" type="Label" parent="menu_manager/base_container/vertical_container/exit_btn" unique_id=1787515268]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,4 +66,4 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="main_menu/base_container/vertical_container/exit_btn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="menu_manager/base_container/vertical_container/exit_btn" to="." method="_on_exit_btn_pressed"]

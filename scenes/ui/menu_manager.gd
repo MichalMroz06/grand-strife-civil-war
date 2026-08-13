@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var screen_container: Control = $main_menu/screen_container
+@onready var screen_container: Control = $menu_manager/screen_container
 
 @export var main_menu_scene: PackedScene = preload("uid://bre176g3lqfq3")
 @export var credits_scene: PackedScene
