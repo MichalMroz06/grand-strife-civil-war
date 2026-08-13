@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var version_lbl: Label = $container/debug_info/vertical_container/version_lbl
 @onready var fps_lbl: Label = $container/debug_info/vertical_container/fps_lbl
 
-@export var game_version: String = "0.1.0-dev"
+@export var game_version: String = "0.1.1-dev"
 @export var update_interval: float = 0.1
 
 var _time_passed: float = 0.0
