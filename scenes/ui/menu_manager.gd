@@ -4,7 +4,7 @@ extends CanvasLayer
 
 @export var main_menu_scene: PackedScene = preload("uid://bre176g3lqfq3")
 @export var credits_scene: PackedScene = preload("uid://ci2kaobp55ueg")
-@export var settings_scene: PackedScene
+@export var settings_scene: PackedScene = preload("uid://bce7frqpi7fc")
 var current_screen: Control = null
 
 func _ready() -> void:
@@ -39,7 +39,7 @@ func _on_credits_pressed() -> void:
 	open_screen(credits_scene)
 
 func _on_settings_pressed() -> void:
-	print("settings")
+	open_screen(settings_scene)
 
 func _on_load_game_pressed() -> void:
 	print("load_game")
