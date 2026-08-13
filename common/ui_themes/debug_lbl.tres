@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://b6n3fjjduash3"]
 
-[ext_resource type="FontFile" uid="uid://cy6v4177rwkfw" path="res://assets/fonts/IMMORTAL.ttf" id="1_o24uc"]
+[ext_resource type="FontFile" uid="uid://cy6v4177rwkfw" path="res://assets/ui/fonts/IMMORTAL.ttf" id="1_o24uc"]
 
 [resource]
 Label/font_sizes/font_size = 8

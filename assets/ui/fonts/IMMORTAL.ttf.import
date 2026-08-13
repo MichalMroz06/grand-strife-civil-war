@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cy6v4177rwkfw"
-path="res://.godot/imported/IMMORTAL.ttf-f856ce0bb4f2bf16e9331e0b3b0fe65f.fontdata"
+path="res://.godot/imported/IMMORTAL.ttf-3ef963fa10b5beb553872ce308a180b7.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/IMMORTAL.ttf"
-dest_files=["res://.godot/imported/IMMORTAL.ttf-f856ce0bb4f2bf16e9331e0b3b0fe65f.fontdata"]
+source_file="res://assets/ui/fonts/IMMORTAL.ttf"
+dest_files=["res://.godot/imported/IMMORTAL.ttf-3ef963fa10b5beb553872ce308a180b7.fontdata"]
 
 [params]
 

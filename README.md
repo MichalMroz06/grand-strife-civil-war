@@ -105,7 +105,9 @@ Window settings could not be applied in default, cause of debbuging tools and em
 ## 📁 Project Structure
 
 - `assets` - Folder with 'raw' files, such as graphics, fonts
-  - `fonts` - Folder fonts
+  - `ui` - Folder with UI graphics
+    - `cursor` - Folder with cursor graphic
+    - `fonts` - Folder fonts
 - `common` - Folder with scripts, resources available in whole project
   - `autoload` - Folder with autoload scripts
   - `debug` - Folder with debug tools available globally

@@ -1,12 +1,16 @@
 extends Node
 
-var SETTINGS_FILE = "user://settings.cfg"
+var SETTINGS_FILE: String = "user://settings.cfg"
 
-var current_resolution := Vector2i(1920, 1080)
-var is_borderless := true
-var is_fullscreen := false
+var current_resolution: Vector2i = Vector2i(1920, 1080)
+var is_borderless: bool = true
+var is_fullscreen: bool = false
 
-var is_debug := true
+var is_debug: bool = true
+
+var cursor_arrow_img: Image = load("uid://b3agsl50vu61j").get_image()
+const REFERENCE_HEIGHT: float = 360.0
+const BASE_CURSOR_SIZE: int = 16
 
 func _ready():
 	load_settings()
@@ -20,6 +24,21 @@ func _process(delta: float) -> void:
 			is_debug = true
 		apply_settings()
 		save_settings()
+
+func update_cursors_scale() -> void:
+	var window_height := float(get_window().size.y)
+	
+	var scale_factor: float = window_height / REFERENCE_HEIGHT
+	var new_size: int = int(BASE_CURSOR_SIZE * scale_factor)
+	new_size = clampi(new_size, 16, 128)
+	
+	var scaled_arrow: ImageTexture = scale_image(cursor_arrow_img, new_size)
+	Input.set_custom_mouse_cursor(scaled_arrow, Input.CURSOR_ARROW)
+
+func scale_image(source_img: Image, target_size: int) -> ImageTexture:
+	var img_copy: Image = source_img.duplicate()
+	img_copy.resize(target_size, target_size, Image.INTERPOLATE_LANCZOS)
+	return ImageTexture.create_from_image(img_copy)
 
 func apply_settings() -> void:
 	if is_fullscreen:
@@ -35,6 +54,7 @@ func apply_settings() -> void:
 		var window_half_size := Vector2i(Vector2(current_resolution) / 2.0)
 		DisplayServer.window_set_position(screen_center - window_half_size)
 	
+	update_cursors_scale()
 	DebugInfo.set_debug_status()
 
 func save_settings() -> void:
