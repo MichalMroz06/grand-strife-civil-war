@@ -1,9 +1,95 @@
 [gd_scene format=3 uid="uid://bre176g3lqfq3"]
 
+[ext_resource type="Script" uid="uid://bfym3mxcurxqx" path="res://scenes/ui/menu_pages/main_menu.gd" id="1_ljkof"]
+[ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="2_vqi5a"]
+
 [node name="main_menu" type="Control" unique_id=2105593980]
 layout_mode = 3
+anchor_left = 0.1
+anchor_right = 0.4
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ljkof")
+
+[node name="vertical_container" type="VBoxContainer" parent="." unique_id=1460479303]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.84
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="new_game_btn" type="TextureButton" parent="vertical_container" unique_id=1889624277]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="new_game_btn_lbl" type="Label" parent="vertical_container/new_game_btn" unique_id=1265913954]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_vqi5a")
+text = "New Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="load_game_btn" type="TextureButton" parent="vertical_container" unique_id=383322987]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="load_game_btn_lbl" type="Label" parent="vertical_container/load_game_btn" unique_id=628944094]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vqi5a")
+text = "Load Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings_btn" type="TextureButton" parent="vertical_container" unique_id=2117328633]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="settings_btn_lbl" type="Label" parent="vertical_container/settings_btn" unique_id=252054982]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vqi5a")
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="credits_btn" type="TextureButton" parent="vertical_container" unique_id=550724554]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="credits_btn_lbl" type="Label" parent="vertical_container/credits_btn" unique_id=1566310402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vqi5a")
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="vertical_container/new_game_btn" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="vertical_container/load_game_btn" to="." method="_on_load_game_btn_pressed"]
+[connection signal="pressed" from="vertical_container/settings_btn" to="." method="_on_settings_btn_pressed"]
+[connection signal="pressed" from="vertical_container/credits_btn" to="." method="_on_credits_btn_pressed"]
