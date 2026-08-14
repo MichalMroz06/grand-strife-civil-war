@@ -19,6 +19,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+
+[node name="color_background" type="ColorRect" parent="settings_section" unique_id=1628863669]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.7
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
 
 [node name="nav_section" type="Control" parent="." unique_id=1743407173]
 layout_mode = 1
