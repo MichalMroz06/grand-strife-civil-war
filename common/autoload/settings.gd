@@ -5,6 +5,7 @@ var SETTINGS_FILE: String = "user://settings.cfg"
 var current_resolution: Vector2i = Vector2i(1920, 1080)
 var is_borderless: bool = true
 var is_fullscreen: bool = false
+var fps_limit: int = 60
 
 var is_debug: bool = true
 
@@ -54,6 +55,8 @@ func apply_settings() -> void:
 		var window_half_size := Vector2i(Vector2(current_resolution) / 2.0)
 		DisplayServer.window_set_position(screen_center - window_half_size)
 	
+	Engine.max_fps = fps_limit
+	
 	update_cursors_scale()
 	DebugInfo.set_debug_status()
 
@@ -64,6 +67,7 @@ func save_settings() -> void:
 	config.set_value("video", "resolution_y", current_resolution.y)
 	config.set_value("video", "borderless", is_borderless)
 	config.set_value("video", "fullscreen", is_fullscreen)
+	config.set_value("video", "fps_limit", fps_limit)
 	
 	config.set_value("debug", "is_debug", is_debug)
 	
@@ -78,6 +82,7 @@ func load_settings() -> void:
 		current_resolution.y = config.get_value("video", "resolution_y", current_resolution.y)
 		is_borderless = config.get_value("video", "borderless", is_borderless)
 		is_fullscreen = config.get_value("video", "fullscreen", is_fullscreen)
+		fps_limit = config.get_value("video", "fps_limit", fps_limit)
 		
 		is_debug = config.get_value("debug", "is_debug", is_debug)
 	else:
