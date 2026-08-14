@@ -2,6 +2,38 @@
 
 [ext_resource type="Script" uid="uid://ndd58vrsydol" path="res://scenes/ui/menu_pages/credits.gd" id="1_5g55p"]
 [ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="1_j6tib"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="2_0a56m"]
+[ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="2_6ink7"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="3_6ink7"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="4_lrd74"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="5_n2eqn"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="6_1us81"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="7_o70y4"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="8_b1nxt"]
+
+[sub_resource type="Resource" id="Resource_rt52p"]
+resource_local_to_scene = true
+script = ExtResource("3_6ink7")
+
+[sub_resource type="Resource" id="Resource_55ifi"]
+resource_local_to_scene = true
+script = ExtResource("4_lrd74")
+
+[sub_resource type="Resource" id="Resource_t4017"]
+resource_local_to_scene = true
+script = ExtResource("5_n2eqn")
+
+[sub_resource type="Resource" id="Resource_utorl"]
+resource_local_to_scene = true
+script = ExtResource("6_1us81")
+
+[sub_resource type="Resource" id="Resource_4mayd"]
+resource_local_to_scene = true
+script = ExtResource("7_o70y4")
+
+[sub_resource type="Resource" id="Resource_etsgn"]
+resource_local_to_scene = true
+script = ExtResource("8_b1nxt")
 
 [node name="credits" type="Control" unique_id=436544235]
 layout_mode = 3
@@ -19,6 +51,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="credits_lbl" type="RichTextLabel" parent="credits_section" unique_id=212338796]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_6ink7")
+bbcode_enabled = true
+script = ExtResource("2_0a56m")
+h1 = SubResource("Resource_rt52p")
+h2 = SubResource("Resource_55ifi")
+h3 = SubResource("Resource_t4017")
+h4 = SubResource("Resource_utorl")
+h5 = SubResource("Resource_4mayd")
+h6 = SubResource("Resource_etsgn")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
 [node name="nav_section" type="Control" parent="." unique_id=1707410826]
 layout_mode = 1

@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=3 uid="uid://ctmoqufcoiv4m"]
+
+[ext_resource type="FontFile" uid="uid://cy6v4177rwkfw" path="res://assets/ui/fonts/IMMORTAL.ttf" id="1_ig2cg"]
+
+[resource]
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("1_ig2cg")
+RichTextLabel/font_sizes/bold_font_size = 8
+RichTextLabel/font_sizes/bold_italics_font_size = 8
+RichTextLabel/font_sizes/italics_font_size = 8
+RichTextLabel/font_sizes/mono_font_size = 8
+RichTextLabel/font_sizes/normal_font_size = 8
+RichTextLabel/fonts/bold_font = ExtResource("1_ig2cg")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_ig2cg")
+RichTextLabel/fonts/italics_font = ExtResource("1_ig2cg")
+RichTextLabel/fonts/mono_font = ExtResource("1_ig2cg")
+RichTextLabel/fonts/normal_font = ExtResource("1_ig2cg")
