@@ -1,23 +1,5 @@
 Thank you for playing my game! Below is the complete list of creators, third-party assets, libraries, and tools used in this project.
 
-
-## ART & GRAPHICS
-
-* **Asset Pack** - [Pixellab](https://www.pixellab.ai/)
-
-
-## MUSIC & SOUND EFFECTS (SFX)
-
-* For 0.1.1-dev version there aren't any sound effects
-
-
-## FONTS
-
-* **Immortal** - Apostrophic Labs
-  * **Source:** [Immortal](https://www.1001fonts.com/immortal-font.html)
-  * **License:** [Free for commercial use](https://st.1001fonts.net/license/immortal/readme.txt)
-
-
 ## LIBRARIES, ADD-ONS & GODOT PLUGINS
 
 * **MarkdownLabel** – Daenvil

@@ -109,4 +109,72 @@ text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="main_credits_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=1325767597]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="main_credits_btn_lbl" type="Label" parent="nav_section/vertical_container/main_credits_btn" unique_id=45142575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j6tib")
+text = "Main Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="art_and_graphics_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=40186630]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="art_and_graphics_btn_lbl" type="Label" parent="nav_section/vertical_container/art_and_graphics_btn" unique_id=184554091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j6tib")
+text = "Art and Graphics"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="music_and_sound_effects_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=39929917]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="music_and_sound_effects_btn_lbl" type="Label" parent="nav_section/vertical_container/music_and_sound_effects_btn" unique_id=500753495]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j6tib")
+text = "Music and SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fonts_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=471472114]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="fonts_btn_lbl" type="Label" parent="nav_section/vertical_container/fonts_btn" unique_id=451991966]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j6tib")
+text = "Fonts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="nav_section/vertical_container/back_btn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/main_credits_btn" to="." method="_on_main_credits_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/art_and_graphics_btn" to="." method="_on_art_and_graphics_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/music_and_sound_effects_btn" to="." method="_on_music_and_sound_effects_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/fonts_btn" to="." method="_on_fonts_btn_pressed"]
