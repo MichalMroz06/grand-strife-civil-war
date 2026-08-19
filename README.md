@@ -117,6 +117,7 @@ Window settings could not be applied in default, cause of debbuging tools and em
     - `menu_pages` - Folder with menu pages, such as `main_menu` or `settings`
       - `credits_lbls` - Folder with .md files for Credits section
       - `settings_sections` - Folder with section used in settings page
+    - `ui_elements` - Folder with new custom ui elements
 
 ---
 

@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://cy6v4177rwkfw" path="res://assets/ui/fonts/IMMORTAL.ttf" id="1_ig2cg"]
 
 [resource]
-Label/font_sizes/font_size = 8
+Label/font_sizes/font_size = 10
 Label/fonts/font = ExtResource("1_ig2cg")
 RichTextLabel/font_sizes/bold_font_size = 8
 RichTextLabel/font_sizes/bold_italics_font_size = 8

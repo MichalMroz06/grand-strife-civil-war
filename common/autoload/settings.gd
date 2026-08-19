@@ -68,6 +68,9 @@ func apply_settings() -> void:
 	apply_bus_volume(BUS_MUSIC, volume_music)
 	apply_bus_volume(BUS_SFX, volume_sfx)
 	
+	# --- Controls Settings ---
+	apply_controls_settings()
+	
 	# --- Debug Settings ---
 	update_cursors_scale()
 	DebugInfo.set_debug_status()
@@ -84,6 +87,8 @@ func save_settings() -> void:
 	config.set_value("audio", "volume_master", volume_master)
 	config.set_value("audio", "volume_music", volume_music)
 	config.set_value("audio", "volume_sfx", volume_sfx)
+	
+	save_controls_to_config(config)
 	
 	config.set_value("debug", "is_debug", is_debug)
 	
@@ -103,6 +108,8 @@ func load_settings() -> void:
 		volume_master = config.get_value("audio", "volume_master", volume_master)
 		volume_music = config.get_value("audio", "volume_music", volume_music)
 		volume_sfx = config.get_value("audio", "volume_sfx", volume_sfx)
+		
+		load_controls_from_config(config)
 		
 		is_debug = config.get_value("debug", "is_debug", is_debug)
 	else:
@@ -132,3 +139,34 @@ func get_bus_volume(bus_name: StringName) -> float:
 		BUS_MUSIC: return volume_music
 		BUS_SFX: return volume_sfx
 	return 1.0
+
+func save_controls_to_config(config: ConfigFile) -> void:
+	for action in InputMap.get_actions():
+		if action.begins_with("ui_"):
+			continue
+			
+		var events: Array[InputEvent] = InputMap.action_get_events(action)
+		if not events.is_empty():
+			config.set_value("controls", action, events[0])
+
+func load_controls_from_config(config: ConfigFile) -> void:
+	if not config.has_section("controls"):
+		return
+		
+	for action in config.get_section_keys("controls"):
+		if InputMap.has_action(action):
+			var event: Variant = config.get_value("controls", action, null)
+			if event is InputEvent:
+				InputMap.action_erase_events(action)
+				InputMap.action_add_event(action, event)
+
+func apply_controls_settings() -> void:
+	var config: ConfigFile = ConfigFile.new()
+	if config.load(SETTINGS_FILE) == OK:
+		load_controls_from_config(config)
+
+func save_action_keybinding(action_name: String, event: InputEvent) -> void:
+	var config: ConfigFile = ConfigFile.new()
+	config.load(SETTINGS_FILE)
+	config.set_value("controls", action_name, event)
+	config.save(SETTINGS_FILE)

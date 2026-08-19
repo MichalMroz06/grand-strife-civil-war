@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bfloy0mxr3c2s"]
+
+[ext_resource type="Script" uid="uid://dvuljps7uqsap" path="res://scenes/ui/menu_pages/settings_sections/controls_section.gd" id="1_cwikq"]
+
+[node name="controls_section" type="Control" unique_id=554220436]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cwikq")
+
+[node name="container" type="Control" parent="." unique_id=1033439742]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="scroll_container" type="ScrollContainer" parent="container" unique_id=57071519]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container" unique_id=1528978139]
+layout_mode = 2

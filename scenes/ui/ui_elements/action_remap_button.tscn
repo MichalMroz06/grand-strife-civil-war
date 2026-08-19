@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bgn8fa4n7nity"]
+
+[ext_resource type="Script" uid="uid://behmu3p323nkh" path="res://scenes/ui/ui_elements/action_remap_button.gd" id="1_5almp"]
+[ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="2_5almp"]
+
+[node name="action_remap_button" type="TextureButton" unique_id=263809622]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5almp")
+
+[node name="key_lbl" type="Label" parent="." unique_id=1579538845]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5almp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

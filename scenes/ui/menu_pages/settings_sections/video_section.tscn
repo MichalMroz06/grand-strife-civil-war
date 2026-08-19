@@ -32,7 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="window_vertical_container" type="VBoxContainer" parent="container/horizontal_container" unique_id=982008737]
-custom_minimum_size = Vector2(160, 0)
+custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 
 [node name="window_mode" type="Control" parent="container/horizontal_container/window_vertical_container" unique_id=1611341165]
@@ -166,7 +166,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="frames_vertical_container" type="VBoxContainer" parent="container/horizontal_container" unique_id=1786596740]
-custom_minimum_size = Vector2(160, 0)
+custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 
 [node name="fps_limit" type="Control" parent="container/horizontal_container/frames_vertical_container" unique_id=848954126]
