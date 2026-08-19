@@ -1,6 +1,7 @@
 extends Control
 
 @onready var video_section: PackedScene = preload("uid://lai6x5kklqk1")
+@onready var audio_section: PackedScene = preload("uid://boxlxh3p01xxr")
 
 @onready var settings_section: Control = $settings_section
 @onready var color_background: ColorRect = $settings_section/color_background
@@ -28,7 +29,7 @@ func _on_video_btn_pressed() -> void:
 	open_section(video_section)
 
 func _on_audio_btn_pressed() -> void:
-	print("audio")
+	open_section(audio_section)
 
 func _on_controls_btn_pressed() -> void:
 	print("controls")

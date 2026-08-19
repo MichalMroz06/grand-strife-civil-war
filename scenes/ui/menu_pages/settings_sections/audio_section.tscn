@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://boxlxh3p01xxr"]
+
+[ext_resource type="Script" uid="uid://va4l3depnr4a" path="res://scenes/ui/menu_pages/settings_sections/audio_section.gd" id="1_w08fg"]
+[ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="2_xww7d"]
+
+[node name="audio_section" type="Control" unique_id=1055351126]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w08fg")
+
+[node name="container" type="Control" parent="." unique_id=445251429]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="container" unique_id=1664274545]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="master_volume" type="Control" parent="container/vertical_container" unique_id=1632626058]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/vertical_container/master_volume" unique_id=1168177342]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="master_volume_lbl" type="Label" parent="container/vertical_container/master_volume/horizontal_container" unique_id=17978463]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_xww7d")
+text = "Master volume:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="horizontal_slider" type="HSlider" parent="container/vertical_container/master_volume/horizontal_container" unique_id=589525084]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="current_master_volume_lbl" type="Label" parent="container/vertical_container/master_volume/horizontal_container" unique_id=1190200407]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_xww7d")
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="music_volume" type="Control" parent="container/vertical_container" unique_id=347529881]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/vertical_container/music_volume" unique_id=1583711011]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="master_volume_lbl" type="Label" parent="container/vertical_container/music_volume/horizontal_container" unique_id=495645383]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_xww7d")
+text = "Music volume:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="horizontal_slider" type="HSlider" parent="container/vertical_container/music_volume/horizontal_container" unique_id=496231195]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="current_music_volume_lbl" type="Label" parent="container/vertical_container/music_volume/horizontal_container" unique_id=1377531567]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_xww7d")
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sfx_volume" type="Control" parent="container/vertical_container" unique_id=1344783136]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/vertical_container/sfx_volume" unique_id=223465523]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="master_volume_lbl" type="Label" parent="container/vertical_container/sfx_volume/horizontal_container" unique_id=1287608191]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_xww7d")
+text = "Sound effects volume:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="horizontal_slider" type="HSlider" parent="container/vertical_container/sfx_volume/horizontal_container" unique_id=2128299071]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="current_sfx_volume_lbl" type="Label" parent="container/vertical_container/sfx_volume/horizontal_container" unique_id=1461437664]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_xww7d")
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="value_changed" from="container/vertical_container/master_volume/horizontal_container/horizontal_slider" to="." method="_on_master_volume_changed"]
+[connection signal="value_changed" from="container/vertical_container/music_volume/horizontal_container/horizontal_slider" to="." method="_on_music_volume_changed"]
+[connection signal="value_changed" from="container/vertical_container/sfx_volume/horizontal_container/horizontal_slider" to="." method="_on_sfx_volume_changed"]

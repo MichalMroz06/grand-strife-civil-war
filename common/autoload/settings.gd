@@ -9,6 +9,14 @@ var fps_limit: int = 60
 
 var is_debug: bool = true
 
+const BUS_MASTER: StringName = &"Master"
+const BUS_MUSIC: StringName = &"Music"
+const BUS_SFX: StringName = &"SFX"
+
+var volume_master: float = 1.0
+var volume_music: float = 0.8
+var volume_sfx: float = 0.8
+
 var cursor_arrow_img: Image = load("uid://b3agsl50vu61j").get_image()
 const REFERENCE_HEIGHT: float = 360.0
 const BASE_CURSOR_SIZE: int = 16
@@ -19,10 +27,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_toggle"):
-		if is_debug:
-			is_debug = false
-		else:
-			is_debug = true
+		is_debug = !is_debug
 		apply_settings()
 		save_settings()
 
@@ -42,6 +47,7 @@ func scale_image(source_img: Image, target_size: int) -> ImageTexture:
 	return ImageTexture.create_from_image(img_copy)
 
 func apply_settings() -> void:
+	# --- Video Settings ---
 	if is_fullscreen:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	elif is_borderless:
@@ -57,6 +63,12 @@ func apply_settings() -> void:
 	
 	Engine.max_fps = fps_limit
 	
+	# --- Audio Settings ---
+	apply_bus_volume(BUS_MASTER, volume_master)
+	apply_bus_volume(BUS_MUSIC, volume_music)
+	apply_bus_volume(BUS_SFX, volume_sfx)
+	
+	# --- Debug Settings ---
 	update_cursors_scale()
 	DebugInfo.set_debug_status()
 
@@ -68,6 +80,10 @@ func save_settings() -> void:
 	config.set_value("video", "borderless", is_borderless)
 	config.set_value("video", "fullscreen", is_fullscreen)
 	config.set_value("video", "fps_limit", fps_limit)
+	
+	config.set_value("audio", "volume_master", volume_master)
+	config.set_value("audio", "volume_music", volume_music)
+	config.set_value("audio", "volume_sfx", volume_sfx)
 	
 	config.set_value("debug", "is_debug", is_debug)
 	
@@ -84,6 +100,35 @@ func load_settings() -> void:
 		is_fullscreen = config.get_value("video", "fullscreen", is_fullscreen)
 		fps_limit = config.get_value("video", "fps_limit", fps_limit)
 		
+		volume_master = config.get_value("audio", "volume_master", volume_master)
+		volume_music = config.get_value("audio", "volume_music", volume_music)
+		volume_sfx = config.get_value("audio", "volume_sfx", volume_sfx)
+		
 		is_debug = config.get_value("debug", "is_debug", is_debug)
 	else:
 		save_settings()
+
+func apply_bus_volume(bus_name: StringName, value: float) -> void:
+	var bus_index := AudioServer.get_bus_index(bus_name)
+	if bus_index == -1:
+		push_warning("Cannot find bus: ", bus_name)
+		return
+	
+	var db_value: float = linear_to_db(value)
+	AudioServer.set_bus_volume_db(bus_index, db_value)
+	AudioServer.set_bus_mute(bus_index, value <= 0.001)
+
+func set_bus_volume(bus_name: StringName, value: float) -> void:
+	match bus_name:
+		BUS_MASTER: volume_master = value
+		BUS_MUSIC: volume_music = value
+		BUS_SFX: volume_sfx = value
+	
+	apply_bus_volume(bus_name, value)
+
+func get_bus_volume(bus_name: StringName) -> float:
+	match bus_name:
+		BUS_MASTER: return volume_master
+		BUS_MUSIC: return volume_music
+		BUS_SFX: return volume_sfx
+	return 1.0
