@@ -1,7 +1,7 @@
 extends Control
 
 @onready var horizontal_slider: HSlider = $vertical_container/horizontal_container/horizontal_slider
-@onready var current_fps_limit: Label = $vertical_container/current_fps_limit
+@onready var current_fps_limit: Label = $vertical_container/horizontal_container/current_fps_limit
 
 func _ready() -> void:
 	horizontal_slider.value = Engine.max_fps
