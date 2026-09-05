@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://0gl3keb2ok8y"]
 
 [ext_resource type="Script" uid="uid://ct61jngulm6hn" path="res://scenes/ui/menu_manager.gd" id="1_bg225"]
+[ext_resource type="AudioStream" uid="uid://bboxkxe36ddy5" path="res://assets/audio/menu/soundtrack/bg-soundtrack-menu-01.ogg" id="2_nw85q"]
 [ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="2_s8l6t"]
+[ext_resource type="AudioStream" uid="uid://dlg7p1m38lls2" path="res://assets/audio/menu/soundtrack/bg-soundtrack-menu-02.ogg" id="3_06jpt"]
 
 [node name="menu_manager" type="CanvasLayer" unique_id=305854321]
 script = ExtResource("1_bg225")
+playlist = Array[AudioStream]([ExtResource("2_nw85q"), ExtResource("3_06jpt")])
 
 [node name="menu_manager" type="Control" parent="." unique_id=1909292624]
 layout_mode = 3
@@ -71,5 +74,12 @@ theme = ExtResource("2_s8l6t")
 text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="bg-soundtrack-menu-01" type="AudioStreamPlayer" parent="." unique_id=1474985419]
+stream = ExtResource("2_nw85q")
+bus = &"Music"
+
+[node name="bg-soundtrack-menu-02" type="AudioStreamPlayer" parent="." unique_id=1365498596]
+stream = ExtResource("3_06jpt")
 
 [connection signal="pressed" from="menu_manager/base_container/vertical_container/exit_btn" to="." method="_on_exit_btn_pressed"]
