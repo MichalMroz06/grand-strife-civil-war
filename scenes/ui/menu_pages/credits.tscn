@@ -96,6 +96,7 @@ alignment = 2
 [node name="back_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=1710417592]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="back_btn_lbl" type="Label" parent="nav_section/vertical_container/back_btn" unique_id=1994744729]
 layout_mode = 1
@@ -112,6 +113,7 @@ vertical_alignment = 1
 [node name="main_credits_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=1325767597]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="main_credits_btn_lbl" type="Label" parent="nav_section/vertical_container/main_credits_btn" unique_id=45142575]
 layout_mode = 1
@@ -128,6 +130,7 @@ vertical_alignment = 1
 [node name="art_and_graphics_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=40186630]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="art_and_graphics_btn_lbl" type="Label" parent="nav_section/vertical_container/art_and_graphics_btn" unique_id=184554091]
 layout_mode = 1
@@ -144,6 +147,7 @@ vertical_alignment = 1
 [node name="music_and_sound_effects_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=39929917]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="music_and_sound_effects_btn_lbl" type="Label" parent="nav_section/vertical_container/music_and_sound_effects_btn" unique_id=500753495]
 layout_mode = 1
@@ -160,6 +164,7 @@ vertical_alignment = 1
 [node name="fonts_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=471472114]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="fonts_btn_lbl" type="Label" parent="nav_section/vertical_container/fonts_btn" unique_id=451991966]
 layout_mode = 1

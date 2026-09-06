@@ -62,6 +62,7 @@ alignment = 2
 [node name="exit_btn" type="TextureButton" parent="menu_manager/base_container/vertical_container" unique_id=1494080046]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="exit_btn_lbl" type="Label" parent="menu_manager/base_container/vertical_container/exit_btn" unique_id=1787515268]
 layout_mode = 1

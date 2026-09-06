@@ -28,6 +28,7 @@ alignment = 2
 [node name="new_game_btn" type="TextureButton" parent="vertical_container" unique_id=1889624277]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="new_game_btn_lbl" type="Label" parent="vertical_container/new_game_btn" unique_id=1265913954]
 layout_mode = 1
@@ -44,6 +45,7 @@ vertical_alignment = 1
 [node name="load_game_btn" type="TextureButton" parent="vertical_container" unique_id=383322987]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="load_game_btn_lbl" type="Label" parent="vertical_container/load_game_btn" unique_id=628944094]
 layout_mode = 1
@@ -60,6 +62,7 @@ vertical_alignment = 1
 [node name="settings_btn" type="TextureButton" parent="vertical_container" unique_id=2117328633]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="settings_btn_lbl" type="Label" parent="vertical_container/settings_btn" unique_id=252054982]
 layout_mode = 1
@@ -76,6 +79,7 @@ vertical_alignment = 1
 [node name="credits_btn" type="TextureButton" parent="vertical_container" unique_id=550724554]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="credits_btn_lbl" type="Label" parent="vertical_container/credits_btn" unique_id=1566310402]
 layout_mode = 1

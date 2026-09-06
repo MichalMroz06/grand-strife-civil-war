@@ -78,6 +78,7 @@ vertical_alignment = 1
 [node name="collapse_expand_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=422369454]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="list_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container" unique_id=793437568]
 layout_mode = 2
@@ -88,6 +89,7 @@ layout_mode = 2
 [node name="option_1_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container" unique_id=2138564084]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1606772589]
 layout_mode = 1
@@ -143,6 +145,7 @@ vertical_alignment = 1
 [node name="collapse_expand_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=983228747]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="list_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container" unique_id=1952089776]
 layout_mode = 2
@@ -153,6 +156,7 @@ layout_mode = 2
 [node name="option_1_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container" unique_id=1114490192]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1160562098]
 layout_mode = 1
@@ -191,6 +195,7 @@ vertical_alignment = 1
 [node name="horizontal_slider" type="HSlider" parent="container/scroll_container/vertical_container/fps_limit/vertical_container/horizontal_container" unique_id=775570174]
 custom_minimum_size = Vector2(100, 25)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 min_value = 30.0
 max_value = 130.0
 step = 10.0

@@ -45,6 +45,7 @@ func create_action_list() -> void:
 			var remap_button: TextureButton = remap_button_scene.instantiate()
 			remap_button.setup(action, self)
 			remap_button.custom_minimum_size = Vector2i(120, 0)
+			remap_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 			
 			margin_container.add_child(row)
 			row.add_child(label)

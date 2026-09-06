@@ -18,6 +18,7 @@ var volume_music: float = 0.8
 var volume_sfx: float = 0.8
 
 var cursor_arrow_img: Image = load("uid://b3agsl50vu61j").get_image()
+var point_hand_img: Image = load("uid://bcs1kvry5cfds").get_image()
 const REFERENCE_HEIGHT: float = 360.0
 const BASE_CURSOR_SIZE: int = 16
 
@@ -39,7 +40,9 @@ func update_cursors_scale() -> void:
 	new_size = clampi(new_size, 16, 128)
 	
 	var scaled_arrow: ImageTexture = scale_image(cursor_arrow_img, new_size)
+	var scaled_pointing: ImageTexture = scale_image(point_hand_img, new_size)
 	Input.set_custom_mouse_cursor(scaled_arrow, Input.CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(scaled_pointing, Input.CURSOR_POINTING_HAND)
 
 func scale_image(source_img: Image, target_size: int) -> ImageTexture:
 	var img_copy: Image = source_img.duplicate()
