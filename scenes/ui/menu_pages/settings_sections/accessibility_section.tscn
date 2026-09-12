@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://c6j2y8y8k12ab"]
+
+[ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="1_paragraph"]
+[ext_resource type="Script" path="res://scenes/ui/menu_pages/settings_sections/language_selection.gd" id="2_lang"]
+
+[node name="accessibility_section" type="Control" unique_id=892347102]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="container" type="Control" parent="." unique_id=459201948]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="scroll_container" type="ScrollContainer" parent="container" unique_id=1498273641]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.65
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container" unique_id=748291034]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="language_selection" type="Control" parent="container/scroll_container/vertical_container" unique_id=1938472910]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_lang")
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/language_selection" unique_id=648291023]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 67.0
+grow_vertical = 2
+
+[node name="language_lbl" type="Label" parent="container/scroll_container/vertical_container/language_selection/horizontal_container" unique_id=839201923]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_paragraph")
+text = "SETTINGS_ACCESSIBILITY_LANGUAGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/language_selection/horizontal_container" unique_id=293840192]
+layout_mode = 2
+
+[node name="header_container" type="PanelContainer" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container" unique_id=192837465]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container/header_container" unique_id=849201948]
+layout_mode = 2
+alignment = 1
+
+[node name="current_lang_lbl" type="Label" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=482910394]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme = ExtResource("1_paragraph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="collapse_expand_btn" type="TextureButton" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=749201948]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="list_container" type="PanelContainer" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container" unique_id=384920194]
+layout_mode = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container/list_container" unique_id=948201948]
+layout_mode = 2
+
+[node name="option_1_btn" type="TextureButton" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container/list_container/vertical_container" unique_id=194820194]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=492810394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_paragraph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="container/scroll_container/vertical_container/language_selection/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn" to="container/scroll_container/vertical_container/language_selection" method="_on_collapse_expand_btn_pressed"]

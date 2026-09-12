@@ -9,7 +9,12 @@ extends Control
 
 signal back_pressed
 
+var tag_regex: RegEx
+
 func _ready() -> void:
+	tag_regex = RegEx.new()
+	tag_regex.compile("\\{\\{([A-Za-z0-9_]+)\\}\\}")
+	
 	var credits_lbl_content: String = load_credits_file(credits_lbl_md_path)
 	credits_lbl.markdown_text = credits_lbl_content
 
@@ -21,6 +26,12 @@ func load_credits_file(path: String) -> String:
 		var file: FileAccess = FileAccess.open(path, FileAccess.READ)
 		var markdown_text: String = file.get_as_text()
 		file.close()
+		
+		if tag_regex:
+			for regex_match in tag_regex.search_all(markdown_text):
+				var full_tag: String = regex_match.get_string(0)
+				var key: String = regex_match.get_string(1)
+				markdown_text = markdown_text.replace(full_tag, tr(key))
 		
 		return markdown_text
 	else:

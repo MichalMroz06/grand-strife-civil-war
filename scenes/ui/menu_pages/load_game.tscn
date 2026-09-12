@@ -61,7 +61,7 @@ grow_vertical = 2
 [node name="current_mission_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container" unique_id=546074826]
 layout_mode = 2
 theme = ExtResource("3_gh3ml")
-text = "Current Mission"
+text = "LOAD_GAME_CURRENT_MISSION"
 horizontal_alignment = 1
 
 [node name="player_level_horizontal_container" type="HBoxContainer" parent="load_game_section/info_section/item_preview/vertical_container" unique_id=1425639861]
@@ -71,7 +71,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 theme = ExtResource("2_c6b6h")
-text = "Player Level:"
+text = "LOAD_GAME_PLAYER_LEVEL"
 
 [node name="player_level_value_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/player_level_horizontal_container" unique_id=1551481294]
 layout_mode = 2
@@ -85,7 +85,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 theme = ExtResource("2_c6b6h")
-text = "Money:"
+text = "LOAD_GAME_MONEY"
 
 [node name="money_value_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/money_horizontal_container" unique_id=2038221843]
 layout_mode = 2
@@ -100,7 +100,7 @@ custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 size_flags_vertical = 1
 theme = ExtResource("2_c6b6h")
-text = "Time Spent:"
+text = "LOAD_GAME_TIME_SPENT"
 
 [node name="time_spent_value_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/time_spent_horizontal_container" unique_id=683084630]
 layout_mode = 2
@@ -125,7 +125,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_gh3ml")
-text = "Select file to see preview"
+text = "LOAD_GAME_SELECT_FILE_PREVIEW"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -168,7 +168,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_gh3ml")
-text = "Cannot find any saved files"
+text = "LOAD_GAME_NO_FILES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -202,7 +202,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_c6b6h")
-text = "Load Game"
+text = "LOAD_GAME_BTN_LOAD"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -213,7 +213,7 @@ size_flags_horizontal = 10
 size_flags_vertical = 1
 theme = ExtResource("2_c6b6h")
 theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "Trying to load different game version save may cause problems!"
+text = "LOAD_GAME_VERSION_WARNING"
 autowrap_mode = 3
 
 [node name="nav_section" type="Control" parent="." unique_id=1982725327]
@@ -250,7 +250,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_7ranw")
-text = "Back"
+text = "COMMON_BACK"
 horizontal_alignment = 1
 vertical_alignment = 1
 

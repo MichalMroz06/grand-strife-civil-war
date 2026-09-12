@@ -12,6 +12,14 @@ extends Control
 
 @onready var vertical_container: VBoxContainer = $container/scroll_container/vertical_container
 
+const SECTION_TRANSLATIONS = {
+	"others": "CONTROLS_SECTION_OTHERS"
+}
+
+const ACTION_TRANSLATIONS = {
+	"debug_toggle": "CONTROLS_ACTION_DEBUG_TOGGLE"
+}
+
 func _ready() -> void:
 	create_action_list()
 
@@ -36,7 +44,10 @@ func create_action_list() -> void:
 			row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			
 			var label = Label.new()
-			label.text = action.capitalize()
+			if ACTION_TRANSLATIONS.has(action):
+				label.text = ACTION_TRANSLATIONS[action]
+			else:
+				label.text = action.capitalize()
 			label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			label.custom_minimum_size = Vector2i(80, 0)
 			if paragraph_lbl_theme:
@@ -59,7 +70,10 @@ func create_section_header(title: String) -> void:
 		vertical_container.add_child(separator)
 
 	var header_label = Label.new()
-	header_label.text = title.capitalize() + ":"
+	if SECTION_TRANSLATIONS.has(title):
+		header_label.text = SECTION_TRANSLATIONS[title]
+	else:
+		header_label.text = title.capitalize() + ":"
 	if header_lbl_theme:
 		header_label.theme = header_lbl_theme
 	

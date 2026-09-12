@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bbt8hwm1mfcxb"
+
+[deps]
+
+files=["res://common/translations/main_menu_translations.en.translation", "res://common/translations/main_menu_translations.pl.translation"]
+
+source_file="res://common/translations/main_menu_translations.csv"
+dest_files=["res://common/translations/main_menu_translations.en.translation", "res://common/translations/main_menu_translations.pl.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

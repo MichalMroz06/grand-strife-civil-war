@@ -1,20 +1,20 @@
-Thank you for playing my game! Below is the complete list of creators, third-party assets, libraries, and tools used in this project.
+{{CREDITS_MAIN_INTRO}}
 
-## LIBRARIES, ADD-ONS & GODOT PLUGINS
+## {{CREDITS_MAIN_LIBRARIES}}
 
 * **MarkdownLabel** – Daenvil
-  * **Source:** [Github](https://github.com/daenvil/MarkdownLabel)
-  * **License:** [MIT License](https://github.com/daenvil/MarkdownLabel?tab=MIT-1-ov-file)
+  * **{{CREDITS_FIELD_SOURCE}}:** [Github](https://github.com/daenvil/MarkdownLabel)
+  * **{{CREDITS_FIELD_LICENSE}}:** [MIT License](https://github.com/daenvil/MarkdownLabel?tab=MIT-1-ov-file)
 
 
-## ENGINE & TOOLS
+## {{CREDITS_MAIN_ENGINE}}
 
 * **Godot Engine** – [Github](https://godotengine.org)
-  * **License:** MIT License
-* **Krita** – [Source Code](https://invent.kde.org/graphics/krita)
+  * **{{CREDITS_FIELD_LICENSE}}:** MIT License
+* **Krita** – [{{CREDITS_FIELD_SOURCE}}](https://invent.kde.org/graphics/krita)
 
 
-## LEGAL NOTICES & LICENSES
+## {{CREDITS_MAIN_LEGAL}}
 
 ### Godot Engine License
 Copyright (c) 2014-present Godot Engine contributors.

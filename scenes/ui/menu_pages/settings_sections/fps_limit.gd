@@ -19,6 +19,6 @@ func _on_horizontal_slider_value_changed(value: float) -> void:
 
 func _update_fps_display(value: int) -> void:
 	if value == 130.0:
-		current_fps_limit.text = "Max (Without limit)"
+		current_fps_limit.text = tr("SETTINGS_VIDEO_FPS_UNLIMITED")
 	else:
 		current_fps_limit.text = str(value) + " FPS"

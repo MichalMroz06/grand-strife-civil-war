@@ -2,6 +2,9 @@ extends Node
 
 var SETTINGS_FILE: String = "user://settings.cfg"
 
+var current_locale: String = "en"
+const SUPPORTED_LOCALES = ["pl", "en"]
+
 var current_resolution: Vector2i = Vector2i(1920, 1080)
 var is_borderless: bool = true
 var is_fullscreen: bool = false
@@ -50,6 +53,9 @@ func scale_image(source_img: Image, target_size: int) -> ImageTexture:
 	return ImageTexture.create_from_image(img_copy)
 
 func apply_settings() -> void:
+	# --- Accessibility Settings ---
+	TranslationServer.set_locale(current_locale)
+	
 	# --- Video Settings ---
 	if is_fullscreen:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
@@ -81,6 +87,8 @@ func apply_settings() -> void:
 func save_settings() -> void:
 	var config := ConfigFile.new()
 	
+	config.set_value("accessibility", "language", current_locale)
+	
 	config.set_value("video", "resolution_x", current_resolution.x)
 	config.set_value("video", "resolution_y", current_resolution.y)
 	config.set_value("video", "borderless", is_borderless)
@@ -102,6 +110,8 @@ func load_settings() -> void:
 	var err := config.load(SETTINGS_FILE)
 	
 	if err == OK:
+		current_locale = config.get_value("accessibility", "language", current_locale)
+		
 		current_resolution.x = config.get_value("video", "resolution_x", current_resolution.x)
 		current_resolution.y = config.get_value("video", "resolution_y", current_resolution.y)
 		is_borderless = config.get_value("video", "borderless", is_borderless)
@@ -116,7 +126,14 @@ func load_settings() -> void:
 		
 		is_debug = config.get_value("debug", "is_debug", is_debug)
 	else:
+		set_default_locale()
 		save_settings()
+
+func set_default_locale() -> void:
+	var system_locale = OS.get_locale().left(2)
+	
+	if SUPPORTED_LOCALES.has(system_locale):
+		current_locale = system_locale
 
 func apply_bus_volume(bus_name: StringName, value: float) -> void:
 	var bus_index := AudioServer.get_bus_index(bus_name)

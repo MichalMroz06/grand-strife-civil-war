@@ -53,7 +53,7 @@ custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
 size_flags_vertical = 0
 theme = ExtResource("1_6hgde")
-text = "Window mode:"
+text = "SETTINGS_VIDEO_WINDOW_MODE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -120,7 +120,7 @@ custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
 size_flags_vertical = 0
 theme = ExtResource("1_6hgde")
-text = "Window size:"
+text = "SETTINGS_VIDEO_WINDOW_SIZE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -188,7 +188,7 @@ custom_minimum_size = Vector2(60, 25)
 layout_mode = 2
 size_flags_vertical = 0
 theme = ExtResource("1_6hgde")
-text = "FPS Limit:"
+text = "SETTINGS_VIDEO_FPS_LIMIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 

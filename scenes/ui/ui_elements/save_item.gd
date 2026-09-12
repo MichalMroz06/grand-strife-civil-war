@@ -18,10 +18,10 @@ func setup(current_file: String, current_mission: String, save_date: String, is_
 	save_date_lbl.text = save_date
 	
 	if is_autosave:
-		is_autosave_lbl.text = "Autosave"
+		is_autosave_lbl.text = "LOAD_GAME_AUTOSAVE"
 		is_autosave_lbl.modulate = Color.DARK_GRAY
 	else:
-		is_autosave_lbl.text = "User Save"
+		is_autosave_lbl.text = "LOAD_GAME_USER_SAVE"
 		is_autosave_lbl.modulate = Color.GREEN
 
 func _on_file_btn_pressed() -> void:

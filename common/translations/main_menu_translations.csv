@@ -1,0 +1,52 @@
+keys,en,pl
+MAIN_MENU_EXIT,Exit,Wyjdź
+MAIN_MENU_NEW_GAME,New Game,Nowa Gra
+MAIN_MENU_LOAD_GAME,Load Game,Wczytaj Grę
+MAIN_MENU_SETTINGS,Settings,Ustawienia
+MAIN_MENU_CREDITS,Credits,Twórcy
+COMMON_BACK,Back,Wróć
+SETTINGS_NAV_ACCESSIBILITY,Accessibility,Dostępność
+SETTINGS_ACCESSIBILITY_LANGUAGE,Language:,Język:
+SETTINGS_NAV_VIDEO,Video,Obraz
+SETTINGS_NAV_AUDIO,Audio,Dźwięk
+SETTINGS_NAV_CONTROLS,Controls,Sterowanie
+SETTINGS_VIDEO_WINDOW_MODE,Window mode:,Tryb okna:
+SETTINGS_VIDEO_WINDOW_SIZE,Window size:,Rozmiar okna:
+SETTINGS_VIDEO_FPS_LIMIT,FPS Limit:,Limit FPS:
+SETTINGS_VIDEO_MODE_FULLSCREEN,Fullscreen,Pełny ekran
+SETTINGS_VIDEO_MODE_BORDERLESS,Borderless,Pełny ekran w oknie
+SETTINGS_VIDEO_MODE_WINDOWED,Windowed,W oknie
+SETTINGS_VIDEO_FPS_UNLIMITED,Max (Without limit),Maks (Bez limitu)
+SETTINGS_AUDIO_MASTER,Master volume:,Głośność główna:
+SETTINGS_AUDIO_MUSIC,Music volume:,Głośność muzyki:
+SETTINGS_AUDIO_SFX,Sound effects volume:,Głośność efektów:
+CONTROLS_SECTION_OTHERS,Others:,Inne:
+CONTROLS_ACTION_DEBUG_TOGGLE,Toggle Debug,Przełącz Debug
+LOAD_GAME_SELECT_FILE_PREVIEW,Select file to see preview,Wybierz plik, aby zobaczyć podgląd
+LOAD_GAME_NO_FILES,Cannot find any saved files,Nie znaleziono żadnych zapisanych gier
+LOAD_GAME_CURRENT_MISSION,Current Mission,Aktualna Misja
+LOAD_GAME_PLAYER_LEVEL,Player Level:,Poziom gracza:
+LOAD_GAME_MONEY,Money:,Pieniądze:
+LOAD_GAME_TIME_SPENT,Time Spent:,Czas gry:
+LOAD_GAME_VERSION_WARNING,Trying to load different game version save may cause problems!,Próba wczytania zapisu z innej wersji gry może spowodować błędy!
+LOAD_GAME_BTN_LOAD,Load Game,Wczytaj Grę
+LOAD_GAME_SAVE_DATE,Save date,Data zapisu
+LOAD_GAME_IS_AUTOSAVE,Is autosave,Typ zapisu
+LOAD_GAME_AUTOSAVE,Autosave,Autozapis
+LOAD_GAME_USER_SAVE,User Save,Zapis gracza
+CREDITS_NAV_MAIN,Main Credits,Główni twórcy
+CREDITS_NAV_ART,Art and Graphics,Grafika
+CREDITS_NAV_AUDIO,Music and SFX,Muzyka i SFX
+CREDITS_NAV_FONTS,Fonts,Czcionki
+CREDITS_MAIN_INTRO,"Thank you for playing my game! Below is the complete list of creators, third-party assets, libraries, and tools used in this project.","Dziękuję za grę w moją grę! Poniżej znajduje się pełna lista twórców, zewnętrznych zasobów, bibliotek i narzędzi użytych w tym projekcie."
+CREDITS_MAIN_LIBRARIES,"LIBRARIES, ADD-ONS & GODOT PLUGINS","BIBLIOTEKI, DODATKI I WTYCZKI GODOT"
+CREDITS_MAIN_ENGINE,"ENGINE & TOOLS","SILNIK I NARZĘDZIA"
+CREDITS_MAIN_LEGAL,"LEGAL NOTICES & LICENSES","INFORMACJE PRAWNE I LICENCJE"
+CREDITS_FIELD_SOURCE,Source,Źródło
+CREDITS_FIELD_LICENSE,License,Licencja
+CREDITS_ART_TITLE,"ART & GRAPHICS","GRAFIKA I SZTUKA"
+CREDITS_ART_ASSET_PACK,Asset Pack,Paczka grafik
+CREDITS_AUDIO_TITLE,"MUSIC & SOUND EFFECTS (SFX)","MUZYKA I EFEKTY DŹWIĘKOWE (SFX)"
+CREDITS_AUDIO_EMPTY,"For 0.1.1-dev version there aren't any sound effects","W wersji 0.1.1-dev nie ma jeszcze żadnych efektów dźwiękowych"
+CREDITS_FONTS_TITLE,FONTS,CZCIONKI
+CREDITS_FONTS_COMMERCIAL_FREE,Free for commercial use,Darmowy do użytku komercyjnego

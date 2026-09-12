@@ -38,7 +38,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_vqi5a")
-text = "New Game"
+text = "MAIN_MENU_NEW_GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -55,7 +55,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_vqi5a")
-text = "Load Game"
+text = "MAIN_MENU_LOAD_GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -72,7 +72,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_vqi5a")
-text = "Settings"
+text = "MAIN_MENU_SETTINGS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -89,7 +89,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_vqi5a")
-text = "Credits"
+text = "MAIN_MENU_CREDITS"
 horizontal_alignment = 1
 vertical_alignment = 1
 

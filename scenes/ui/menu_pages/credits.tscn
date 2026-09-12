@@ -106,7 +106,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_j6tib")
-text = "Back"
+text = "COMMON_BACK"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -123,7 +123,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_j6tib")
-text = "Main Credits"
+text = "CREDITS_NAV_MAIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -140,7 +140,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_j6tib")
-text = "Art and Graphics"
+text = "CREDITS_NAV_ART"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -157,7 +157,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_j6tib")
-text = "Music and SFX"
+text = "CREDITS_NAV_AUDIO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -174,7 +174,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_j6tib")
-text = "Fonts"
+text = "CREDITS_NAV_FONTS"
 horizontal_alignment = 1
 vertical_alignment = 1
 

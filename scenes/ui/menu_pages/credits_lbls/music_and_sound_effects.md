@@ -1,3 +1,3 @@
-## MUSIC & SOUND EFFECTS (SFX)
+## {{CREDITS_AUDIO_TITLE}}
 
-* For 0.1.1-dev version there aren't any sound effects
+* {{CREDITS_AUDIO_EMPTY}}

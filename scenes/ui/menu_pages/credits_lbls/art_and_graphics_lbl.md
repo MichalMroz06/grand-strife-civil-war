@@ -1,3 +1,3 @@
-## ART & GRAPHICS
+## {{CREDITS_ART_TITLE}}
 
-* **Asset Pack** - [Pixellab](https://www.pixellab.ai/)
+* **{{CREDITS_ART_ASSET_PACK}}** - [Pixellab](https://www.pixellab.ai/)

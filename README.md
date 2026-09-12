@@ -116,6 +116,7 @@ Window settings could not be applied in default, cause of debbuging tools and em
   - `autoload` - Folder with autoload scripts
   - `debug` - Folder with debug tools available globally
   - `resources` - Folder with resources used globally in project
+  - `translations` - Folder with data to translate game (currently available languages: EN, PL)
   - `ui_themes` - Folder with themes for ui
 - `scenes` - Folder with modular game elements
   - `ui` - Folder with UI scenes and their logic

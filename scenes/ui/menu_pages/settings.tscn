@@ -75,7 +75,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_g0mr1")
-text = "Back"
+text = "COMMON_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="accessibility_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=1498123456]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="accessibility_btn_lbl" type="Label" parent="nav_section/vertical_container/accessibility_btn" unique_id=1789123456]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_g0mr1")
+text = "SETTINGS_NAV_ACCESSIBILITY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -92,7 +109,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_g0mr1")
-text = "Video"
+text = "SETTINGS_NAV_VIDEO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -109,7 +126,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_g0mr1")
-text = "Audio"
+text = "SETTINGS_NAV_AUDIO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -126,11 +143,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_g0mr1")
-text = "Controls"
+text = "SETTINGS_NAV_CONTROLS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="nav_section/vertical_container/back_btn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/accessibility_btn" to="." method="_on_accessibility_btn_pressed"]
 [connection signal="pressed" from="nav_section/vertical_container/video_btn" to="." method="_on_video_btn_pressed"]
 [connection signal="pressed" from="nav_section/vertical_container/audio_btn" to="." method="_on_audio_btn_pressed"]
 [connection signal="pressed" from="nav_section/vertical_container/controls_btn" to="." method="_on_controls_btn_pressed"]

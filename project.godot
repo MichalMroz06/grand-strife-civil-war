@@ -43,6 +43,10 @@ debug_toggle={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://common/translations/main_menu_translations.en.translation", "res://common/translations/main_menu_translations.pl.translation")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -1,5 +1,6 @@
 extends Control
 
+@onready var accessibility_section: PackedScene = preload("res://scenes/ui/menu_pages/settings_sections/accessibility_section.tscn")
 @onready var video_section: PackedScene = preload("uid://lai6x5kklqk1")
 @onready var audio_section: PackedScene = preload("uid://boxlxh3p01xxr")
 @onready var controls_section: PackedScene = preload("uid://bfloy0mxr3c2s")
@@ -25,6 +26,9 @@ func open_section(new_scene: PackedScene) -> void:
 
 func _on_back_btn_pressed() -> void:
 	back_pressed.emit()
+
+func _on_accessibility_btn_pressed() -> void:
+	open_section(accessibility_section)
 
 func _on_video_btn_pressed() -> void:
 	open_section(video_section)
