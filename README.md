@@ -105,6 +105,10 @@ Window settings could not be applied in default, cause of debbuging tools and em
 ## 📁 Project Structure
 
 - `assets` - Folder with 'raw' files, such as graphics, fonts
+  - `audio` - Folder with audio for game
+    - `licences` - Folder with licences for every audio file
+    - `menu` - Folder with audio used in menu scenes
+      - `soundtrack` - Folder with soundtrack audios files for menu
   - `ui` - Folder with UI graphics
     - `cursor` - Folder with cursor graphic
     - `fonts` - Folder fonts
