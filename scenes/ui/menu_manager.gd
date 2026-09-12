@@ -8,6 +8,7 @@ extends CanvasLayer
 @export var main_menu_scene: PackedScene = preload("uid://bre176g3lqfq3")
 @export var credits_scene: PackedScene = preload("uid://ci2kaobp55ueg")
 @export var settings_scene: PackedScene = preload("uid://bce7frqpi7fc")
+@export var load_game_scene: PackedScene = preload("uid://mu2p31kjh1u3")
 
 @export var playlist: Array[AudioStream] = []
 var current_track_index: int = 0
@@ -63,7 +64,7 @@ func _on_settings_pressed() -> void:
 	open_screen(settings_scene)
 
 func _on_load_game_pressed() -> void:
-	print("load_game")
+	open_screen(load_game_scene)
 
 func _on_new_game_pressed() -> void:
 	print("new_game")

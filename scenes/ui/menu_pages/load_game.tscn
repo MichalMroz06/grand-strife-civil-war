@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://mu2p31kjh1u3"]
+
+[ext_resource type="Script" uid="uid://dn6l865y122er" path="res://scenes/ui/menu_pages/load_game.gd" id="1_nuie2"]
+[ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="2_7ranw"]
+[ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="2_c6b6h"]
+[ext_resource type="Theme" uid="uid://2lmkqmj0ljkf" path="res://common/ui_themes/header_lbl.tres" id="3_gh3ml"]
+
+[node name="load_game" type="Control" unique_id=1507780865]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nuie2")
+
+[node name="load_game_section" type="Control" parent="." unique_id=635151624]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="info_section" type="Control" parent="load_game_section" unique_id=1039894916]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.3
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="color_background" type="ColorRect" parent="load_game_section/info_section" unique_id=590075516]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="item_preview" type="Control" parent="load_game_section/info_section" unique_id=568344328]
+visible = false
+layout_mode = 1
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.98
+anchor_bottom = 0.98
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="load_game_section/info_section/item_preview" unique_id=354916995]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="current_mission_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container" unique_id=546074826]
+layout_mode = 2
+theme = ExtResource("3_gh3ml")
+text = "Current Mission"
+horizontal_alignment = 1
+
+[node name="player_level_horizontal_container" type="HBoxContainer" parent="load_game_section/info_section/item_preview/vertical_container" unique_id=1425639861]
+layout_mode = 2
+
+[node name="player_level_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/player_level_horizontal_container" unique_id=1256055774]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme = ExtResource("2_c6b6h")
+text = "Player Level:"
+
+[node name="player_level_value_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/player_level_horizontal_container" unique_id=1551481294]
+layout_mode = 2
+theme = ExtResource("2_c6b6h")
+text = "Player Level"
+
+[node name="money_horizontal_container" type="HBoxContainer" parent="load_game_section/info_section/item_preview/vertical_container" unique_id=1608394684]
+layout_mode = 2
+
+[node name="money_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/money_horizontal_container" unique_id=1813195564]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme = ExtResource("2_c6b6h")
+text = "Money:"
+
+[node name="money_value_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/money_horizontal_container" unique_id=2038221843]
+layout_mode = 2
+theme = ExtResource("2_c6b6h")
+text = "Money"
+
+[node name="time_spent_horizontal_container" type="HBoxContainer" parent="load_game_section/info_section/item_preview/vertical_container" unique_id=2100329043]
+layout_mode = 2
+
+[node name="time_spent_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/time_spent_horizontal_container" unique_id=2099464856]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_c6b6h")
+text = "Time Spent:"
+
+[node name="time_spent_value_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container/time_spent_horizontal_container" unique_id=683084630]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_c6b6h")
+text = "Time Spent"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="game_version_lbl" type="Label" parent="load_game_section/info_section/item_preview/vertical_container" unique_id=1558185281]
+layout_mode = 2
+size_flags_vertical = 10
+theme = ExtResource("2_c6b6h")
+text = "Game Version"
+horizontal_alignment = 2
+
+[node name="no_preview_lbl" type="Label" parent="load_game_section/info_section" unique_id=1654123501]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gh3ml")
+text = "Select file to see preview"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="saved_files_list" type="Control" parent="load_game_section" unique_id=109305635]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.4
+anchor_right = 0.95
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="color_background" type="ColorRect" parent="load_game_section/saved_files_list" unique_id=179795350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="scroll_container" type="ScrollContainer" parent="load_game_section/saved_files_list" unique_id=1145874031]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.99
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="load_game_section/saved_files_list/scroll_container" unique_id=1900228297]
+layout_mode = 2
+
+[node name="no_files_lbl" type="Label" parent="load_game_section/saved_files_list" unique_id=1629507817]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_gh3ml")
+text = "Cannot find any saved files"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="action_btns_section" type="Control" parent="load_game_section" unique_id=1412352750]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.85
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="horizontal_container" type="HBoxContainer" parent="load_game_section/action_btns_section" unique_id=335452038]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="load_game_btn" type="TextureButton" parent="load_game_section/action_btns_section/horizontal_container" unique_id=532972581]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="load_game_btn_lbl" type="Label" parent="load_game_section/action_btns_section/horizontal_container/load_game_btn" unique_id=1010782185]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_c6b6h")
+text = "Load Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="game_version_warning_lbl" type="Label" parent="load_game_section/action_btns_section/horizontal_container" unique_id=869216561]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme = ExtResource("2_c6b6h")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "Trying to load different game version save may cause problems!"
+autowrap_mode = 3
+
+[node name="nav_section" type="Control" parent="." unique_id=1982725327]
+layout_mode = 1
+anchor_left = 0.1
+anchor_right = 0.4
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="nav_section" unique_id=1788132151]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.84
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="back_btn" type="TextureButton" parent="nav_section/vertical_container" unique_id=767245281]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="back_btn_lbl" type="Label" parent="nav_section/vertical_container/back_btn" unique_id=1878301723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7ranw")
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="load_game_section/action_btns_section/horizontal_container/load_game_btn" to="." method="_on_load_game_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/back_btn" to="." method="_on_back_btn_pressed"]
