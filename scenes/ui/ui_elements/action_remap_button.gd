@@ -1,4 +1,4 @@
-extends TextureButton
+extends Button
 
 @onready var key_lbl: Label = $key_lbl
 
