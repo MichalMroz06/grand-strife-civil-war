@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfym3mxcurxqx" path="res://scenes/ui/menu_pages/main_menu.gd" id="1_ljkof"]
 [ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="2_vqi5a"]
+[ext_resource type="Theme" uid="uid://c52jpvt33740r" path="res://common/ui_themes/menu_btn.tres" id="4_6m32v"]
 
 [node name="main_menu" type="Control" unique_id=2105593980]
 layout_mode = 3
@@ -25,12 +26,13 @@ mouse_filter = 2
 theme_override_constants/separation = 8
 alignment = 2
 
-[node name="new_game_btn" type="TextureButton" parent="vertical_container" unique_id=1889624277]
+[node name="new_game_btn" type="Button" parent="vertical_container" unique_id=656325813]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("4_6m32v")
 
-[node name="new_game_btn_lbl" type="Label" parent="vertical_container/new_game_btn" unique_id=1265913954]
+[node name="new_game_btn_lbl" type="Label" parent="vertical_container/new_game_btn" unique_id=268015791]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,12 +44,13 @@ text = "MAIN_MENU_NEW_GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="load_game_btn" type="TextureButton" parent="vertical_container" unique_id=383322987]
+[node name="load_game_btn" type="Button" parent="vertical_container" unique_id=1469858680]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("4_6m32v")
 
-[node name="load_game_btn_lbl" type="Label" parent="vertical_container/load_game_btn" unique_id=628944094]
+[node name="load_game_btn_lbl" type="Label" parent="vertical_container/load_game_btn" unique_id=562288889]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,12 +62,13 @@ text = "MAIN_MENU_LOAD_GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="settings_btn" type="TextureButton" parent="vertical_container" unique_id=2117328633]
+[node name="settings_btn" type="Button" parent="vertical_container" unique_id=965340707]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("4_6m32v")
 
-[node name="settings_btn_lbl" type="Label" parent="vertical_container/settings_btn" unique_id=252054982]
+[node name="settings_btn_lbl" type="Label" parent="vertical_container/settings_btn" unique_id=1868067760]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,12 +80,13 @@ text = "MAIN_MENU_SETTINGS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="credits_btn" type="TextureButton" parent="vertical_container" unique_id=550724554]
+[node name="credits_btn" type="Button" parent="vertical_container" unique_id=296982300]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("4_6m32v")
 
-[node name="credits_btn_lbl" type="Label" parent="vertical_container/credits_btn" unique_id=1566310402]
+[node name="credits_btn_lbl" type="Label" parent="vertical_container/credits_btn" unique_id=1382947009]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
