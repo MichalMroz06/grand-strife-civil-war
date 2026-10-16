@@ -34,7 +34,7 @@ LOAD_GAME_SAVE_DATE,Save date,Data zapisu
 LOAD_GAME_IS_AUTOSAVE,Is autosave,Typ zapisu
 LOAD_GAME_AUTOSAVE,Autosave,Autozapis
 LOAD_GAME_USER_SAVE,User Save,Zapis gracza
-CREDITS_NAV_MAIN,Main Credits,Główni twórcy
+CREDITS_NAV_MAIN,Main Credits,Główne informacje
 CREDITS_NAV_ART,Art and Graphics,Grafika
 CREDITS_NAV_AUDIO,Music and SFX,Muzyka i SFX
 CREDITS_NAV_FONTS,Fonts,Czcionki
