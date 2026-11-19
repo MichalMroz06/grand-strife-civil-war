@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://cjj5xljnuvhcu"]
+
+[ext_resource type="Texture2D" uid="uid://do0gmcsvph0o5" path="res://assets/ui/elements/slider_grabber.png" id="1_ek8te"]
+[ext_resource type="Texture2D" uid="uid://dxvefralhuoqr" path="res://assets/ui/elements/slider_grabber_higligh.png" id="2_uo54p"]
+
+[resource]
+HSlider/icons/grabber = ExtResource("1_ek8te")
+HSlider/icons/grabber_highlight = ExtResource("2_uo54p")
