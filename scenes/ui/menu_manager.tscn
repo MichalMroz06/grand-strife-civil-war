@@ -39,7 +39,7 @@ offset_right = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0.6)
+color = Color(0, 0, 0, 0.5)
 
 [node name="screen_container" type="Control" parent="menu_manager" unique_id=251355471]
 layout_mode = 1

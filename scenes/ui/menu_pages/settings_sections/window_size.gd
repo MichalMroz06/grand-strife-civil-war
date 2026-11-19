@@ -10,7 +10,7 @@ extends Control
 
 @export var resolutions: Array[Vector2i] = [
 	Vector2i(1280, 720),
-	Vector2i(1710, 962),
+	Vector2i(1600, 900),
 	Vector2i(1920, 1080),
 	Vector2i(2560, 1440),
 	Vector2i(3840, 2160)
