@@ -2,6 +2,8 @@ extends CanvasLayer
 
 @onready var screen_container: Control = $menu_manager/screen_container
 
+@onready var main_menu_background: TextureRect = $menu_manager/main_menu_background
+
 @onready var bg_soundtrack_menu_01: AudioStreamPlayer = $"bg-soundtrack-menu-01"
 @onready var bg_soundtrack_menu_02: AudioStreamPlayer = $"bg-soundtrack-menu-02"
 
@@ -9,6 +11,8 @@ extends CanvasLayer
 @export var credits_scene: PackedScene = preload("uid://ci2kaobp55ueg")
 @export var settings_scene: PackedScene = preload("uid://bce7frqpi7fc")
 @export var load_game_scene: PackedScene = preload("uid://mu2p31kjh1u3")
+
+@export var background_texture = preload("uid://rnn24ge7cpe2")
 
 @export var playlist: Array[AudioStream] = []
 var current_track_index: int = 0
@@ -20,6 +24,8 @@ var inactive_player: AudioStreamPlayer
 
 func _ready() -> void:
 	open_screen(main_menu_scene)
+	
+	main_menu_background.texture = background_texture
 	
 	active_player = bg_soundtrack_menu_01
 	inactive_player = bg_soundtrack_menu_02
