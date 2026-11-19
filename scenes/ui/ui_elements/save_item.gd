@@ -29,8 +29,8 @@ func _on_file_btn_pressed() -> void:
 
 func _select_file() -> void:
 	if is_selected:
-		color_background.color = Color(0.0, 0.0, 0.0, 0.2)
+		color_background.color = Color(0.3, 0.3, 0.3, 0.3)
 		is_selected = false
 	else:
-		color_background.color = Color(0.0, 0.0, 0.0, 0.4)
+		color_background.color = Color(0.1, 0.1, 0.1, 0.5)
 		is_selected = true
