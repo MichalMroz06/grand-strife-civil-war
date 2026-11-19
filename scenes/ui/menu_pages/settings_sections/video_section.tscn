@@ -2,7 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="1_6hgde"]
 [ext_resource type="Script" uid="uid://bx7qf1xesk061" path="res://scenes/ui/menu_pages/settings_sections/window_mode.gd" id="1_rfdr4"]
+[ext_resource type="Theme" uid="uid://c52jpvt33740r" path="res://common/ui_themes/menu_btn.tres" id="3_cxc11"]
 [ext_resource type="Script" uid="uid://c03vu8rf24inf" path="res://scenes/ui/menu_pages/settings_sections/window_size.gd" id="3_rfdr4"]
+[ext_resource type="Texture2D" uid="uid://cs3jumq7ej6uc" path="res://assets/ui/elements/arrow_down.png" id="4_04r1j"]
 [ext_resource type="Script" uid="uid://bjfw8xyhnfi4n" path="res://scenes/ui/menu_pages/settings_sections/fps_limit.gd" id="4_5t0do"]
 
 [node name="video_section" type="Control" unique_id=1204637093]
@@ -68,17 +70,35 @@ layout_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="current_mode_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=1017288227]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme = ExtResource("1_6hgde")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="collapse_expand_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=422369454]
-custom_minimum_size = Vector2(20, 0)
+[node name="collapse_expand_btn" type="Button" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=1797474388]
+custom_minimum_size = Vector2(132, 0)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn" unique_id=1557923432]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="current_mode_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=1071234475]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+theme = ExtResource("1_6hgde")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="collapse_expand_texture" type="TextureRect" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=1379240806]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_04r1j")
+expand_mode = 1
 
 [node name="list_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container" unique_id=793437568]
 layout_mode = 2
@@ -86,12 +106,13 @@ layout_mode = 2
 [node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container" unique_id=2042426647]
 layout_mode = 2
 
-[node name="option_1_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container" unique_id=2138564084]
+[node name="option_1_btn" type="Button" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container" unique_id=1264923406]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
 
-[node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1606772589]
+[node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1301661693]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,7 +124,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="window_size" type="Control" parent="container/scroll_container/vertical_container" unique_id=733817465]
-custom_minimum_size = Vector2(0, 150)
+custom_minimum_size = Vector2(0, 175)
 layout_mode = 2
 mouse_filter = 2
 script = ExtResource("3_rfdr4")
@@ -135,17 +156,35 @@ layout_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="current_size_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=1128373322]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme = ExtResource("1_6hgde")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="collapse_expand_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=983228747]
-custom_minimum_size = Vector2(20, 0)
+[node name="collapse_expand_btn" type="Button" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=854602070]
+custom_minimum_size = Vector2(112, 0)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn" unique_id=825771948]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="current_size_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=1997167492]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+theme = ExtResource("1_6hgde")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="collapse_expand_texture" type="TextureRect" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=408781126]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_04r1j")
+expand_mode = 1
 
 [node name="list_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container" unique_id=1952089776]
 layout_mode = 2
@@ -153,12 +192,13 @@ layout_mode = 2
 [node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container" unique_id=610129544]
 layout_mode = 2
 
-[node name="option_1_btn" type="TextureButton" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container" unique_id=1114490192]
+[node name="option_1_btn" type="Button" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container" unique_id=184308046]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
 
-[node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1160562098]
+[node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1984833474]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
