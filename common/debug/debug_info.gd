@@ -5,7 +5,7 @@ extends CanvasLayer
 
 @export var update_interval: float = 0.1
 
-const GAME_VERSION: String = "0.1.1-dev"
+const GAME_VERSION: String = "0.1.2-dev"
 
 var _time_passed: float = 0.0
 
