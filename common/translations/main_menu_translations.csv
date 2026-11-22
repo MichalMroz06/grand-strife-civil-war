@@ -22,6 +22,14 @@ SETTINGS_AUDIO_MUSIC,Music volume:,Głośność muzyki:
 SETTINGS_AUDIO_SFX,Sound effects volume:,Głośność efektów:
 CONTROLS_SECTION_OTHERS,Others:,Inne:
 CONTROLS_ACTION_DEBUG_TOGGLE,Toggle Debug,Przełącz Debug
+NEW_GAME_STORY,Story Mode,Tryb Fabularny
+NEW_GAME_SANDBOX,Sandbox,Piaskownica
+NEW_GAME_TUTORIAL,Tutorial,Samouczek
+NEW_GAME_STORY_DIFFICULTIES,Difficulty Level:,Poziom Trudności:
+NEW_GAME_STORY_EASY,Easy,Łatwy
+NEW_GAME_STORY_MEDIUM,Medium,Średni
+NEW_GAME_STORY_HARD,Hard,Ciężki
+NEW_GAME_STORY_IMPOSIBLE,Imposible,Niemożliwy
 LOAD_GAME_SELECT_FILE_PREVIEW,Select file to see preview,Wybierz plik, aby zobaczyć podgląd
 LOAD_GAME_NO_FILES,Cannot find any saved files,Nie znaleziono żadnych zapisanych gier
 LOAD_GAME_CURRENT_MISSION,Current Mission,Aktualna Misja

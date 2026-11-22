@@ -11,6 +11,7 @@ extends CanvasLayer
 @export var credits_scene: PackedScene = preload("uid://ci2kaobp55ueg")
 @export var settings_scene: PackedScene = preload("uid://bce7frqpi7fc")
 @export var load_game_scene: PackedScene = preload("uid://mu2p31kjh1u3")
+@export var new_game_scene: PackedScene = preload("uid://dwmua7d25dlij")
 
 @export var background_texture = preload("uid://rnn24ge7cpe2")
 
@@ -73,7 +74,7 @@ func _on_load_game_pressed() -> void:
 	open_screen(load_game_scene)
 
 func _on_new_game_pressed() -> void:
-	print("new_game")
+	open_screen(new_game_scene)
 
 func _on_exit_btn_pressed() -> void:
 	get_tree().quit()
