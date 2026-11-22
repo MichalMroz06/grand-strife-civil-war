@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://5uhogxll58lb"]
+
+[ext_resource type="Script" uid="uid://dhyv66ej38g2f" path="res://scenes/ui/player_hud/hud.gd" id="1_0i6bt"]
+
+[node name="hud" type="CanvasLayer" unique_id=1896244036]
+script = ExtResource("1_0i6bt")
+
+[node name="health_bar" type="ProgressBar" parent="." unique_id=1123471217]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 208.0
+offset_bottom = 35.0
+
+[node name="stamina_bar" type="ProgressBar" parent="." unique_id=869851683]
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 208.0
+offset_bottom = 75.0

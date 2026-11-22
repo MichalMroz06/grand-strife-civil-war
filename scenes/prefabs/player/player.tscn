@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://csi7d25781buj"]
+
+[ext_resource type="Script" uid="uid://brh4c5a0l513i" path="res://scenes/prefabs/player/player.gd" id="1_wv524"]
+[ext_resource type="Texture2D" uid="uid://cqsl1k4cqajgl" path="res://icon.png" id="2_d2wla"]
+[ext_resource type="Script" uid="uid://dep7ot8l7b3us" path="res://common/state_machine/state_machine.gd" id="2_xaiso"]
+[ext_resource type="Script" uid="uid://c6hjiodu3hk1l" path="res://scenes/prefabs/player/states/idle.gd" id="3_jj1be"]
+[ext_resource type="Script" uid="uid://djc6ojdlwsdtl" path="res://scenes/prefabs/player/states/move.gd" id="4_uukly"]
+[ext_resource type="Script" uid="uid://732kiln7w8v8" path="res://scenes/prefabs/player/states/run.gd" id="5_d2wla"]
+[ext_resource type="Script" uid="uid://cv6rn7ekq270s" path="res://scenes/prefabs/player/states/dash.gd" id="6_wrhcn"]
+[ext_resource type="Script" uid="uid://c3oynjs7rpc2v" path="res://scenes/prefabs/player/states/attack.gd" id="7_e2q2s"]
+[ext_resource type="Script" uid="uid://c8jwho6smx0ai" path="res://scenes/prefabs/player/states/hurt.gd" id="8_r8dyk"]
+[ext_resource type="Script" uid="uid://y0xwl7ln7q4t" path="res://scenes/prefabs/player/states/dead.gd" id="9_lqpcr"]
+[ext_resource type="Script" uid="uid://rwo3ax3ckp1v" path="res://scenes/prefabs/player/components/health_component.gd" id="10_awash"]
+[ext_resource type="Script" uid="uid://w5rgxbr21tr5" path="res://scenes/prefabs/player/components/stamina_component.gd" id="11_2wxvc"]
+[ext_resource type="PackedScene" uid="uid://5uhogxll58lb" path="res://scenes/ui/player_hud/hud.tscn" id="12_uukly"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k188v"]
+
+[node name="player" type="CharacterBody2D" unique_id=980998309]
+script = ExtResource("1_wv524")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1826232106]
+texture = ExtResource("2_d2wla")
+
+[node name="player_hitbox_shape" type="CollisionShape2D" parent="." unique_id=1253691382]
+shape = SubResource("CircleShape2D_k188v")
+
+[node name="attack_hitbox" type="Area2D" parent="." unique_id=1393209494]
+
+[node name="attack_hitbox_shape" type="CollisionShape2D" parent="attack_hitbox" unique_id=1408382969]
+shape = SubResource("CircleShape2D_k188v")
+
+[node name="hud" parent="." unique_id=1896244036 instance=ExtResource("12_uukly")]
+
+[node name="state_machine" type="Node" parent="." unique_id=1560789540 node_paths=PackedStringArray("initial_state", "player")]
+script = ExtResource("2_xaiso")
+initial_state = NodePath("idle")
+player = NodePath("..")
+
+[node name="idle" type="Node" parent="state_machine" unique_id=258495258]
+script = ExtResource("3_jj1be")
+
+[node name="move" type="Node" parent="state_machine" unique_id=1172449126]
+script = ExtResource("4_uukly")
+
+[node name="run" type="Node" parent="state_machine" unique_id=693477979]
+script = ExtResource("5_d2wla")
+
+[node name="dash" type="Node" parent="state_machine" unique_id=1718340174]
+script = ExtResource("6_wrhcn")
+
+[node name="attack" type="Node" parent="state_machine" unique_id=246822047]
+script = ExtResource("7_e2q2s")
+
+[node name="hurt" type="Node" parent="state_machine" unique_id=352442027]
+script = ExtResource("8_r8dyk")
+
+[node name="dead" type="Node" parent="state_machine" unique_id=453797585]
+script = ExtResource("9_lqpcr")
+
+[node name="stats_components" type="Node" parent="." unique_id=1611997862]
+
+[node name="health_component" type="Node" parent="stats_components" unique_id=1526278668]
+script = ExtResource("10_awash")
+
+[node name="stamina_component" type="Node" parent="stats_components" unique_id=1007754720]
+script = ExtResource("11_2wxvc")
+
+[node name="animations" type="AnimationPlayer" parent="." unique_id=2116924407]
+
+[node name="player_camera" type="Camera2D" parent="." unique_id=14969853]
