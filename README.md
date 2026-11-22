@@ -109,9 +109,11 @@ Window settings could not be applied in default, cause of debbuging tools and em
     - `licences` - Folder with licences for every audio file
     - `menu` - Folder with audio used in menu scenes
       - `soundtrack` - Folder with soundtrack audios files for menu
+  - `backgrounds` - Folder with backgrounds for menu
   - `ui` - Folder with UI graphics
     - `cursor` - Folder with cursor graphic
-    - `fonts` - Folder fonts
+    - `elements` - Folder with ui elements assets
+    - `fonts` - Folder with fonts
 - `common` - Folder with scripts, resources available in whole project
   - `autoload` - Folder with autoload scripts
   - `debug` - Folder with debug tools available globally
@@ -122,6 +124,7 @@ Window settings could not be applied in default, cause of debbuging tools and em
   - `ui` - Folder with UI scenes and their logic
     - `menu_pages` - Folder with menu pages, such as `main_menu` or `settings`
       - `credits_lbls` - Folder with .md files for Credits section
+      - `new_game_sections` - Folder with section used in new game page
       - `settings_sections` - Folder with section used in settings page
     - `ui_elements` - Folder with new custom ui elements
 
