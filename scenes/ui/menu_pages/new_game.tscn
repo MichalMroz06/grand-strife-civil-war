@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dwmua7d25dlij"]
+
+[ext_resource type="Script" uid="uid://bgygfk25wo7n" path="res://scenes/ui/menu_pages/new_game.gd" id="1_71jbu"]
+[ext_resource type="Theme" uid="uid://c52jpvt33740r" path="res://common/ui_themes/menu_btn.tres" id="1_qipnr"]
+[ext_resource type="Theme" uid="uid://byxjom4ro8j5t" path="res://common/ui_themes/btn_lbl.tres" id="2_71jbu"]
+
+[node name="new_game" type="Control" unique_id=1628444263]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_71jbu")
+
+[node name="new_game_section" type="Control" parent="." unique_id=566717868]
+layout_mode = 1
+anchor_left = 0.4
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="color_background" type="ColorRect" parent="new_game_section" unique_id=881404250]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.7
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="nav_section" type="Control" parent="." unique_id=98055611]
+layout_mode = 1
+anchor_left = 0.1
+anchor_right = 0.4
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="nav_section" unique_id=964139731]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.84
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="back_btn" type="Button" parent="nav_section/vertical_container" unique_id=469342194]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_qipnr")
+
+[node name="back_btn_lbl" type="Label" parent="nav_section/vertical_container/back_btn" unique_id=595686798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_71jbu")
+text = "COMMON_BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="story_mode_btn" type="Button" parent="nav_section/vertical_container" unique_id=614777458]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_qipnr")
+
+[node name="story_mode_btn_lbl" type="Label" parent="nav_section/vertical_container/story_mode_btn" unique_id=821302616]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_71jbu")
+text = "NEW_GAME_STORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sandbox_btn" type="Button" parent="nav_section/vertical_container" unique_id=118724692]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_qipnr")
+
+[node name="sandbox_btn_lbl" type="Label" parent="nav_section/vertical_container/sandbox_btn" unique_id=1500330993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_71jbu")
+text = "NEW_GAME_SANDBOX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tutorial_btn" type="Button" parent="nav_section/vertical_container" unique_id=825248017]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_qipnr")
+
+[node name="tutorial_btn_lbl" type="Label" parent="nav_section/vertical_container/tutorial_btn" unique_id=1948328595]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_71jbu")
+text = "NEW_GAME_TUTORIAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="nav_section/vertical_container/back_btn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/story_mode_btn" to="." method="_on_story_mode_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/sandbox_btn" to="." method="_on_sandbox_btn_pressed"]
+[connection signal="pressed" from="nav_section/vertical_container/tutorial_btn" to="." method="_on_tutorial_btn_pressed"]

@@ -2,13 +2,26 @@ extends Node
 
 var SETTINGS_FILE: String = "user://settings.cfg"
 
+var current_locale: String = "en"
+const SUPPORTED_LOCALES = ["pl", "en"]
+
 var current_resolution: Vector2i = Vector2i(1920, 1080)
 var is_borderless: bool = true
 var is_fullscreen: bool = false
+var fps_limit: int = 60
 
 var is_debug: bool = true
 
+const BUS_MASTER: StringName = &"Master"
+const BUS_MUSIC: StringName = &"Music"
+const BUS_SFX: StringName = &"SFX"
+
+var volume_master: float = 1.0
+var volume_music: float = 0.8
+var volume_sfx: float = 0.8
+
 var cursor_arrow_img: Image = load("uid://b3agsl50vu61j").get_image()
+var point_hand_img: Image = load("uid://bcs1kvry5cfds").get_image()
 const REFERENCE_HEIGHT: float = 360.0
 const BASE_CURSOR_SIZE: int = 16
 
@@ -18,10 +31,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_toggle"):
-		if is_debug:
-			is_debug = false
-		else:
-			is_debug = true
+		is_debug = !is_debug
 		apply_settings()
 		save_settings()
 
@@ -33,7 +43,9 @@ func update_cursors_scale() -> void:
 	new_size = clampi(new_size, 16, 128)
 	
 	var scaled_arrow: ImageTexture = scale_image(cursor_arrow_img, new_size)
+	var scaled_pointing: ImageTexture = scale_image(point_hand_img, new_size)
 	Input.set_custom_mouse_cursor(scaled_arrow, Input.CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(scaled_pointing, Input.CURSOR_POINTING_HAND)
 
 func scale_image(source_img: Image, target_size: int) -> ImageTexture:
 	var img_copy: Image = source_img.duplicate()
@@ -41,6 +53,10 @@ func scale_image(source_img: Image, target_size: int) -> ImageTexture:
 	return ImageTexture.create_from_image(img_copy)
 
 func apply_settings() -> void:
+	# --- Accessibility Settings ---
+	TranslationServer.set_locale(current_locale)
+	
+	# --- Video Settings ---
 	if is_fullscreen:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	elif is_borderless:
@@ -54,16 +70,36 @@ func apply_settings() -> void:
 		var window_half_size := Vector2i(Vector2(current_resolution) / 2.0)
 		DisplayServer.window_set_position(screen_center - window_half_size)
 	
+	Engine.max_fps = fps_limit
+	
+	# --- Audio Settings ---
+	apply_bus_volume(BUS_MASTER, volume_master)
+	apply_bus_volume(BUS_MUSIC, volume_music)
+	apply_bus_volume(BUS_SFX, volume_sfx)
+	
+	# --- Controls Settings ---
+	apply_controls_settings()
+	
+	# --- Debug Settings ---
 	update_cursors_scale()
 	DebugInfo.set_debug_status()
 
 func save_settings() -> void:
 	var config := ConfigFile.new()
 	
+	config.set_value("accessibility", "language", current_locale)
+	
 	config.set_value("video", "resolution_x", current_resolution.x)
 	config.set_value("video", "resolution_y", current_resolution.y)
 	config.set_value("video", "borderless", is_borderless)
 	config.set_value("video", "fullscreen", is_fullscreen)
+	config.set_value("video", "fps_limit", fps_limit)
+	
+	config.set_value("audio", "volume_master", volume_master)
+	config.set_value("audio", "volume_music", volume_music)
+	config.set_value("audio", "volume_sfx", volume_sfx)
+	
+	save_controls_to_config(config)
 	
 	config.set_value("debug", "is_debug", is_debug)
 	
@@ -74,11 +110,83 @@ func load_settings() -> void:
 	var err := config.load(SETTINGS_FILE)
 	
 	if err == OK:
+		current_locale = config.get_value("accessibility", "language", current_locale)
+		
 		current_resolution.x = config.get_value("video", "resolution_x", current_resolution.x)
 		current_resolution.y = config.get_value("video", "resolution_y", current_resolution.y)
 		is_borderless = config.get_value("video", "borderless", is_borderless)
 		is_fullscreen = config.get_value("video", "fullscreen", is_fullscreen)
+		fps_limit = config.get_value("video", "fps_limit", fps_limit)
+		
+		volume_master = config.get_value("audio", "volume_master", volume_master)
+		volume_music = config.get_value("audio", "volume_music", volume_music)
+		volume_sfx = config.get_value("audio", "volume_sfx", volume_sfx)
+		
+		load_controls_from_config(config)
 		
 		is_debug = config.get_value("debug", "is_debug", is_debug)
 	else:
+		set_default_locale()
 		save_settings()
+
+func set_default_locale() -> void:
+	var system_locale = OS.get_locale().left(2)
+	
+	if SUPPORTED_LOCALES.has(system_locale):
+		current_locale = system_locale
+
+func apply_bus_volume(bus_name: StringName, value: float) -> void:
+	var bus_index := AudioServer.get_bus_index(bus_name)
+	if bus_index == -1:
+		push_warning("Cannot find bus: ", bus_name)
+		return
+	
+	var db_value: float = linear_to_db(value)
+	AudioServer.set_bus_volume_db(bus_index, db_value)
+	AudioServer.set_bus_mute(bus_index, value <= 0.001)
+
+func set_bus_volume(bus_name: StringName, value: float) -> void:
+	match bus_name:
+		BUS_MASTER: volume_master = value
+		BUS_MUSIC: volume_music = value
+		BUS_SFX: volume_sfx = value
+	
+	apply_bus_volume(bus_name, value)
+
+func get_bus_volume(bus_name: StringName) -> float:
+	match bus_name:
+		BUS_MASTER: return volume_master
+		BUS_MUSIC: return volume_music
+		BUS_SFX: return volume_sfx
+	return 1.0
+
+func save_controls_to_config(config: ConfigFile) -> void:
+	for action in InputMap.get_actions():
+		if action.begins_with("ui_"):
+			continue
+			
+		var events: Array[InputEvent] = InputMap.action_get_events(action)
+		if not events.is_empty():
+			config.set_value("controls", action, events[0])
+
+func load_controls_from_config(config: ConfigFile) -> void:
+	if not config.has_section("controls"):
+		return
+		
+	for action in config.get_section_keys("controls"):
+		if InputMap.has_action(action):
+			var event: Variant = config.get_value("controls", action, null)
+			if event is InputEvent:
+				InputMap.action_erase_events(action)
+				InputMap.action_add_event(action, event)
+
+func apply_controls_settings() -> void:
+	var config: ConfigFile = ConfigFile.new()
+	if config.load(SETTINGS_FILE) == OK:
+		load_controls_from_config(config)
+
+func save_action_keybinding(action_name: String, event: InputEvent) -> void:
+	var config: ConfigFile = ConfigFile.new()
+	config.load(SETTINGS_FILE)
+	config.set_value("controls", action_name, event)
+	config.save(SETTINGS_FILE)

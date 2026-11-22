@@ -15,6 +15,10 @@ run/main_scene="uid://0gl3keb2ok8y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://cqsl1k4cqajgl"
 
+[audio]
+
+buses/default_bus_layout="uid://dcjc87mjeonda"
+
 [autoload]
 
 Settings="*uid://bjcnoype15hcl"
@@ -27,6 +31,10 @@ window/size/viewport_height=360
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/markdownlabel/plugin.cfg")
+
 [input]
 
 debug_toggle={
@@ -34,6 +42,10 @@ debug_toggle={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":96,"key_label":0,"unicode":96,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://common/translations/main_menu_translations.en.translation", "res://common/translations/main_menu_translations.pl.translation")
 
 [physics]
 

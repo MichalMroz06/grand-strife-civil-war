@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://lai6x5kklqk1"]
+
+[ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="1_6hgde"]
+[ext_resource type="Script" uid="uid://bx7qf1xesk061" path="res://scenes/ui/menu_pages/settings_sections/window_mode.gd" id="1_rfdr4"]
+[ext_resource type="Theme" uid="uid://cjj5xljnuvhcu" path="res://common/ui_themes/slider.tres" id="3_04r1j"]
+[ext_resource type="Theme" uid="uid://c52jpvt33740r" path="res://common/ui_themes/menu_btn.tres" id="3_cxc11"]
+[ext_resource type="Script" uid="uid://c03vu8rf24inf" path="res://scenes/ui/menu_pages/settings_sections/window_size.gd" id="3_rfdr4"]
+[ext_resource type="Texture2D" uid="uid://cs3jumq7ej6uc" path="res://assets/ui/elements/arrow_down.png" id="4_04r1j"]
+[ext_resource type="Script" uid="uid://bjfw8xyhnfi4n" path="res://scenes/ui/menu_pages/settings_sections/fps_limit.gd" id="4_5t0do"]
+
+[node name="video_section" type="Control" unique_id=1204637093]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="container" type="Control" parent="." unique_id=254966130]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="scroll_container" type="ScrollContainer" parent="container" unique_id=1255986563]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.65
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container" unique_id=982008737]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="window_mode" type="Control" parent="container/scroll_container/vertical_container" unique_id=1611341165]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("1_rfdr4")
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_mode" unique_id=500799189]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 67.0
+grow_vertical = 2
+
+[node name="window_mode_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container" unique_id=1166715214]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_6hgde")
+text = "SETTINGS_VIDEO_WINDOW_MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container" unique_id=566700770]
+layout_mode = 2
+
+[node name="header_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container" unique_id=1481881961]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container" unique_id=211959301]
+layout_mode = 2
+alignment = 1
+
+[node name="collapse_expand_btn" type="Button" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=1797474388]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn" unique_id=1557923432]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="current_mode_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=1071234475]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+theme = ExtResource("1_6hgde")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="collapse_expand_texture" type="TextureRect" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=1379240806]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_04r1j")
+expand_mode = 1
+
+[node name="list_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container" unique_id=793437568]
+layout_mode = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container" unique_id=2042426647]
+layout_mode = 2
+
+[node name="option_1_btn" type="Button" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container" unique_id=1264923406]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
+
+[node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1301661693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6hgde")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="window_size" type="Control" parent="container/scroll_container/vertical_container" unique_id=733817465]
+custom_minimum_size = Vector2(0, 175)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("3_rfdr4")
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_size" unique_id=1857590829]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 67.0
+grow_vertical = 2
+
+[node name="window_size_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container" unique_id=1523011242]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_6hgde")
+text = "SETTINGS_VIDEO_WINDOW_SIZE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container" unique_id=1957365398]
+layout_mode = 2
+
+[node name="header_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container" unique_id=806616263]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container" unique_id=931895676]
+layout_mode = 2
+alignment = 1
+
+[node name="collapse_expand_btn" type="Button" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container" unique_id=854602070]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn" unique_id=825771948]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="current_size_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=1997167492]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+theme = ExtResource("1_6hgde")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="collapse_expand_texture" type="TextureRect" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn/horizontal_container" unique_id=408781126]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_04r1j")
+expand_mode = 1
+
+[node name="list_container" type="PanelContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container" unique_id=1952089776]
+layout_mode = 2
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container" unique_id=610129544]
+layout_mode = 2
+
+[node name="option_1_btn" type="Button" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container" unique_id=184308046]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_cxc11")
+
+[node name="option_1_btn_lbl" type="Label" parent="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/list_container/vertical_container/option_1_btn" unique_id=1984833474]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6hgde")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fps_limit" type="Control" parent="container/scroll_container/vertical_container" unique_id=848954126]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("4_5t0do")
+
+[node name="vertical_container" type="VBoxContainer" parent="container/scroll_container/vertical_container/fps_limit" unique_id=491872732]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 125.0
+
+[node name="horizontal_container" type="HBoxContainer" parent="container/scroll_container/vertical_container/fps_limit/vertical_container" unique_id=285697646]
+layout_mode = 2
+
+[node name="window_mode_lbl" type="Label" parent="container/scroll_container/vertical_container/fps_limit/vertical_container/horizontal_container" unique_id=1548688782]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_6hgde")
+text = "SETTINGS_VIDEO_FPS_LIMIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="horizontal_slider" type="HSlider" parent="container/scroll_container/vertical_container/fps_limit/vertical_container/horizontal_container" unique_id=775570174]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_04r1j")
+min_value = 30.0
+max_value = 130.0
+step = 10.0
+value = 60.0
+
+[node name="current_fps_limit" type="Label" parent="container/scroll_container/vertical_container/fps_limit/vertical_container/horizontal_container" unique_id=614520655]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = ExtResource("1_6hgde")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="container/scroll_container/vertical_container/window_mode/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn" to="container/scroll_container/vertical_container/window_mode" method="_on_collapse_expand_btn_pressed"]
+[connection signal="pressed" from="container/scroll_container/vertical_container/window_size/horizontal_container/vertical_container/header_container/horizontal_container/collapse_expand_btn" to="container/scroll_container/vertical_container/window_size" method="_on_collapse_expand_btn_pressed"]
+[connection signal="value_changed" from="container/scroll_container/vertical_container/fps_limit/vertical_container/horizontal_container/horizontal_slider" to="container/scroll_container/vertical_container/fps_limit" method="_on_horizontal_slider_value_changed"]

@@ -1,0 +1,29 @@
+====================================================================
+                    ASSET LICENSE & SOURCE INFO
+====================================================================
+
+IN-GAME ASSET DETAILS
+---------------------
+In-Game File Name  : bg-soundtrack-menu-02.wav
+Asset Category     : Background Music / SFX
+Used In Scene      : Main Menu
+
+ORIGINAL SOURCE DETAILS
+-----------------------
+Platform           : Pixabay (https://pixabay.com)
+Original Title     : Medieval Ambient
+Artist / Creator   : DeusLower
+Source URL         : https://pixabay.com/music/ambient-medieval-ambient-236809/
+Download Date      : 2026-08-18
+
+LICENSE TERMS & COMPLIANCE
+--------------------------
+License Type       : Pixabay Content License (Free for Commercial Use)
+Attribution        : Not required (Maintained internally for compliance)
+Standalone Resale  : NO (Integrated into a compiled video game build)
+Content ID Claim   : Clear / No copyright claims registered
+
+PROOF OF LICENSE
+----------------
+Saved Webpage PDF  : proof_bgm_menu.pdf
+Screenshot         : proof_bgm_menu.png
