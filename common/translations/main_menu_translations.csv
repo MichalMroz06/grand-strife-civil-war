@@ -41,7 +41,15 @@ LOAD_GAME_BTN_LOAD,Load Game,Wczytaj Grę
 LOAD_GAME_SAVE_DATE,Save date,Data zapisu
 LOAD_GAME_IS_AUTOSAVE,Is autosave,Typ zapisu
 LOAD_GAME_AUTOSAVE,Autosave,Autozapis
-LOAD_GAME_USER_SAVE,User Save,Zapis gracza
+LOAD_GAME_USER_SAVE,User Save,Zapis Gracza
+LOADING_SCENE_LOADING_SCENE,Loading Scene...,Ładowanie Sceny...
+LOADING_SCENE_LOADING_ERROR,Loading Error...,Błąd Podczas Ładowania...
+LOADING_SCENE_LOADING_SAVE,Loading Save...,Ładowanie Zapisu...
+LOADING_SCENE_HINT_01,Hint #1: Remember about saving game not to loose progress.,Wskazówka #1: Pamiętaj aby zapisywać grę bo możesz stracić progres.
+LOADING_SCENE_HINT_02,Hint #2: Regularly check your relations with other!,Wskazówka #2: Regularnie sprawdzaj swoje relacje z innymi!
+LOADING_SCENE_HINT_03,Hint #3: Remember: you are not the main hero!,Wskazówka #3: Pamiętaj: nie jesteś głównym bohaterem!
+LOADING_SCENE_HINT_04,Hint #4: Being greedy can be as dangerous as bandits!,Wskazówka #4: Bycie chciwym może być tak samo niebezpieczne co bandyci!
+LOADING_SCENE_HINT_05,Hint #5: You can give feedback about game to make it better.,Wskazówka #5: Możesz podzielić się doświadczeniami z gry aby pomóc przy jej rozwoju.
 CREDITS_NAV_MAIN,Main Credits,Główne informacje
 CREDITS_NAV_ART,Art and Graphics,Grafika
 CREDITS_NAV_AUDIO,Music and SFX,Muzyka i SFX

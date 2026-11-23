@@ -31,4 +31,4 @@ func _on_sandbox_btn_pressed() -> void:
 	print("Sandbox section")
 
 func _on_tutorial_btn_pressed() -> void:
-	print("Tutorial loading...")
+	SceneManager.go_to_scene("res://scenes/worlds/tutorial/tutorial.tscn")

@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://dcjc87mjeonda"
 
 Settings="*uid://bjcnoype15hcl"
 DebugInfo="*uid://gp0kcdmm8kp4"
+SceneManager="*uid://ut6a03bvuffj"
 
 [display]
 

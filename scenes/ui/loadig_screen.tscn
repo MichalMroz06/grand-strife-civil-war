@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://ckbs1rnmid6wv"]
+
+[ext_resource type="Script" uid="uid://151ioserfkrn" path="res://scenes/ui/loadig_screen.gd" id="1_yi0oy"]
+[ext_resource type="Texture2D" uid="uid://rnn24ge7cpe2" path="res://assets/backgrounds/main_menu_basic_background.png" id="2_66xoh"]
+[ext_resource type="Theme" uid="uid://ctmoqufcoiv4m" path="res://common/ui_themes/paragraph_lbl.tres" id="2_e0mmy"]
+[ext_resource type="Theme" uid="uid://2lmkqmj0ljkf" path="res://common/ui_themes/header_lbl.tres" id="3_66xoh"]
+
+[node name="loadig_screen" type="Control" unique_id=1143089224]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yi0oy")
+
+[node name="main_menu_background" type="TextureRect" parent="." unique_id=1787058576]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_66xoh")
+expand_mode = 1
+
+[node name="bottom_section" type="ColorRect" parent="." unique_id=862435485]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.68
+anchor_right = 0.98
+anchor_bottom = 0.98
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.4)
+
+[node name="progress_bar" type="ProgressBar" parent="bottom_section" unique_id=596424764]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.96
+anchor_right = 0.98
+anchor_bottom = 0.96
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="horizontal_container" type="HBoxContainer" parent="bottom_section" unique_id=963929837]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.06
+anchor_right = 0.98
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="hints_lbl" type="Label" parent="bottom_section/horizontal_container" unique_id=185338413]
+custom_minimum_size = Vector2(450, 50)
+layout_mode = 2
+theme = ExtResource("2_e0mmy")
+autowrap_mode = 3
+
+[node name="status_lbl" type="Label" parent="bottom_section/horizontal_container" unique_id=1733860779]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme = ExtResource("3_66xoh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
