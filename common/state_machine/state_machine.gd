@@ -37,7 +37,7 @@ func _on_state_transitioned(target_state_path: String, data: Dictionary = {}) ->
 	var new_state: State = get_node_or_null(clean_name) as State
 	
 	if new_state == null:
-		push_warning("StateMachine: nie znaleziono stanu '" + clean_name + "' (ścieżka: " + target_state_path + ")")
+		push_warning("StateMachine: cannot find state: '" + clean_name + "' (path: " + target_state_path + ")")
 		return
 	
 	if new_state == current_state:

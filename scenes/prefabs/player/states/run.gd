@@ -12,15 +12,17 @@ func handle_input(event: InputEvent) -> void:
 		transitioned.emit("../attack", {})
 
 func physics_update(delta: float) -> void:
+	player.update_aim_facing()
+	
 	var dir := player.get_input_vector()
 	if dir == Vector2.ZERO:
 		transitioned.emit("../idle", {})
 		return
-
+	
 	if not Input.is_action_pressed("move_run") or not player.stamina.try_consume(stamina_drain_per_sec * delta):
 		transitioned.emit("../move", {})
 		return
-
-	player.update_facing(dir)
+	
+	player.update_move_animation("move", dir)
 	player.velocity = dir * player.run_speed
 	player.move_and_slide()

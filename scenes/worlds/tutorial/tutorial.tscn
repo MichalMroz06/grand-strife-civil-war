@@ -5,8 +5,8 @@
 
 [node name="tutorial" type="Node2D" unique_id=734917973]
 
-[node name="player" parent="." unique_id=980998309 instance=ExtResource("1_kqjhb")]
-
 [node name="Icon" type="Sprite2D" parent="." unique_id=1537503766]
 position = Vector2(248, 112)
 texture = ExtResource("2_omc0p")
+
+[node name="player" parent="." unique_id=980998309 instance=ExtResource("1_kqjhb")]

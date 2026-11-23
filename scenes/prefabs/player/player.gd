@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 var last_direction: Vector2 = Vector2.RIGHT
 
-@onready var sprite: Sprite2D = $Icon
+@onready var sprite: Sprite2D = $player
 @onready var animations: AnimationPlayer = $animations
 @onready var health: HealthComponent = $stats_components/health_component
 @onready var stamina: StaminaComponent = $stats_components/stamina_component
@@ -26,6 +26,26 @@ func update_facing(dir: Vector2) -> void:
 	last_direction = dir.normalized()
 	if sprite:
 		sprite.flip_h = dir.x < 0.0
+
+func update_aim_facing() -> void:
+	var to_mouse: Vector2 = get_global_mouse_position() - global_position
+	if to_mouse.length_squared() > 0.001:
+		last_direction = to_mouse.normalized()
+		if sprite:
+			sprite.flip_h = to_mouse.x < 0.0
+
+func update_move_animation(anim_name: String, move_dir: Vector2) -> void:
+	if not animations or not animations.has_animation(anim_name):
+		return
+		
+	var is_walking_backwards: bool = (move_dir.x * last_direction.x) < -0.01
+	animations.speed_scale = -1.0 if is_walking_backwards else 1.0
+	
+	if animations.current_animation != anim_name or not animations.is_playing():
+		if is_walking_backwards:
+			animations.play_backwards(anim_name)
+		else:
+			animations.play(anim_name)
 
 func take_hit(damage: float, knockback: Vector2 = Vector2.ZERO) -> void:
 	if health.current_health <= 0.0:

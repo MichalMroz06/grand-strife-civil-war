@@ -10,6 +10,8 @@ func handle_input(event: InputEvent) -> void:
 		transitioned.emit("../attack", {})
 
 func physics_update(_delta: float) -> void:
+	player.update_aim_facing()
+	
 	var dir := player.get_input_vector()
 	if dir == Vector2.ZERO:
 		transitioned.emit("../idle", {})
@@ -19,6 +21,6 @@ func physics_update(_delta: float) -> void:
 		transitioned.emit("../run", {})
 		return
 	
-	player.update_facing(dir)
+	player.update_move_animation("move", dir)
 	player.velocity = dir * player.walk_speed
 	player.move_and_slide()

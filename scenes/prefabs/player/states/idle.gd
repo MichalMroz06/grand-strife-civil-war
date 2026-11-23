@@ -11,9 +11,11 @@ func handle_input(event: InputEvent) -> void:
 		transitioned.emit("../attack", {})
 
 func physics_update(_delta: float) -> void:
+	player.update_aim_facing()
+	
 	var dir := player.get_input_vector()
 	if dir != Vector2.ZERO:
 		if Input.is_action_pressed("move_run") and player.stamina.current_stamina > 5.0:
 			transitioned.emit("../run", {})
 		else:
-			transitioned.emit(".dawdas./move", {})
+			transitioned.emit("../move", {})
